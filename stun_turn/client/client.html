@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>WebRTC Local Test</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 40px; }
+    #video-player { width: 640px; height: 480px; background: #000; border: 1px solid #333; }
+    #log-box { width: 640px; height: 180px; margin-top: 16px; }
+    button { padding: 8px 16px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>WebRTC 로컬 테스트</h1>
+  <video id="video-player" autoplay playsinline></video>
+  <br/>
+  <button id="start-btn">스트리밍 시작</button>
+  <br/>
+  <p>로그:</p>
+  <textarea id="log-box" readonly></textarea>
+
+  <script>
+    const videoPlayer = document.getElementById('video-player');
+    const logBox = document.getElementById('log-box');
+    const startBtn = document.getElementById('start-btn');
+
+    let pc;
+
+    function log(...args) {
+      const line = args.map(x => typeof x === 'string' ? x : JSON.stringify(x)).join(' ');
+      logBox.value += line + '\n';
+      logBox.scrollTop = logBox.scrollHeight;
+      console.log(...args);
+    }
+
+    async function startConnection() {
+      try {
+        log("연결 시작...");
+        pc = new RTCPeerConnection();
+
+        pc.ontrack = (event) => {
+          log("비디오 트랙 수신됨");
+          // 첫 번째 스트림을 재생
+          if (event.streams && event.streams[0]) {
+            videoPlayer.srcObject = event.streams[0];
+          } else {
+            // 혹시 stream 없이 트랙만 오는 경우 새 스트림 구성
+            const inbound = new MediaStream([event.track]);
+            videoPlayer.srcObject = inbound;
+          }
+        };
+
+        pc.onicecandidate = (event) => {
+          if (event.candidate) log("ICE 후보자 생성됨");
+        };
+
+        // ✅ 서버의 비디오를 "받을 준비" (video m-line 포함)
+        pc.addTransceiver("video", { direction: "recvonly" });
+
+        const offer = await pc.createOffer();
+        await pc.setLocalDescription(offer);
+        log("Offer 생성 및 로컬 설정 완료.");
+
+        // 서버로 Offer 전송
+        log("Offer를 로컬 서버로 보냄...");
+        const response = await fetch("http://127.0.0.1:8080/offer", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ sdp: pc.localDescription.sdp, type: pc.localDescription.type })
+        });
+
+        if (!response.ok) {
+          const text = await response.text();
+          throw new Error("서버 응답 에러: " + response.status + " " + text);
+        }
+
+        const data = await response.json();
+        log("서버로부터 Answer 수신.");
+
+        await pc.setRemoteDescription(new RTCSessionDescription({ sdp: data.sdp, type: data.type }));
+        log("원격 Answer 적용 완료. 연결 성공!");
+      } catch (err) {
+        log("에러:", err.message || err);
+        alert("연결 실패: " + (err.message || err));
+      }
+    }
+
+    startBtn.addEventListener("click", startConnection);
+  </script>
+</body>
+</html>
