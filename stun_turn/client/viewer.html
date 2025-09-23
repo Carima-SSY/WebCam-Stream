@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>WebRTC Viewer (multi)</title>
+  <style>
+    body { font-family: sans-serif; text-align:center; margin-top: 20px; }
+    video { width: 640px; height: 480px; background:#000; border:1px solid #333; display:block; margin: 10px auto; }
+    input, button { font-size: 16px; padding: 6px 8px; }
+    #log { width: 640px; height: 160px; margin: 12px auto; display:block; }
+  </style>
+</head>
+<body>
+  <h1>Viewer</h1>
+  <div>
+    <input id="publisherId" placeholder="publisher_id (예: cam01)" />
+    <input id="serverHost" placeholder="stream server host (예: 3.12.34.56)" />
+    <button id="startBtn">시청 시작</button>
+  </div>
+  <video id="video" autoplay playsinline muted></video>
+  <textarea id="log" readonly></textarea>
+
+<script>
+const video = document.getElementById('video');
+const logBox = document.getElementById('log');
+const startBtn = document.getElementById('startBtn');
+
+function log(...args){ const s=args.map(x=>typeof x==='string'?x:JSON.stringify(x)).join(' ');
+  logBox.value += s + '\n'; logBox.scrollTop = logBox.scrollHeight; console.log(...args); }
+
+async function start(){
+  const publisherId = document.getElementById('publisherId').value.trim();
+  const serverHost  = document.getElementById('serverHost').value.trim();
+  if(!publisherId || !serverHost){ alert("publisher_id와 server host를 입력하세요."); return; }
+
+  const pc = new RTCPeerConnection({
+    iceServers: [
+      { urls: "stun:<TURN_HOST>:3478" },
+      { urls: "turn:<TURN_HOST>:3478?transport=udp", username:"<TURN_USER>", credential:"<TURN_PASS>" },
+      { urls: "turn:<TURN_HOST>:3478?transport=tcp", username:"<TURN_USER>", credential:"<TURN_PASS>" },
+      // TLS(선택):
+      // { urls: "turns:<TURN_HOST>:5349?transport=tcp", username:"<TURN_USER>", credential:"<TURN_PASS>" },
+    ]
+  });
+
+  pc.onconnectionstatechange = () => log("conn:", pc.connectionState);
+  pc.oniceconnectionstatechange = () => log("ice:", pc.iceConnectionState);
+  pc.onicecandidate = e => { if(e.candidate) log("cand:", e.candidate.candidate); };
+
+  pc.ontrack = (ev) => {
+    log("ontrack:", ev.track.kind, "streams:", ev.streams.length);
+    if (ev.streams && ev.streams[0]) video.srcObject = ev.streams[0];
+    else video.srcObject = new MediaStream([ev.track]);
+  };
+
+  // 서버 비디오 수신 준비 (video m-line 보장)
+  pc.addTransceiver("video", { direction: "recvonly" });
+
+  const offer = await pc.createOffer();
+  await pc.setLocalDescription(offer);
+
+  const resp = await fetch(`http://${serverHost}:8080/viewer`, {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ target: publisherId, sdp: pc.localDescription.sdp, type: pc.localDescription.type }),
+  });
+  if(!resp.ok){
+    const t = await resp.text();
+    log("server error:", resp.status, t);
+    alert(`Server ${resp.status}: ${t}`);
+    return;
+  }
+  const data = await resp.json();
+  await pc.setRemoteDescription(data);
+  log("✅ 시청 시작");
+}
+
+startBtn.addEventListener('click', start);
+</script>
+</body>
+</html>
