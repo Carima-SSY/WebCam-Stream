@@ -8,13 +8,13 @@ from aiohttp import ClientSession
 from aiortc import RTCPeerConnection, RTCSessionDescription, RTCConfiguration, RTCIceServer
 from aiortc.contrib.media import MediaPlayer
 
-STREAM_SERVER = "http://<STREAM_SERVER_HOST>:8080/publish"  # EC2의 stream_server.py 엔드포인트
+STREAM_SERVER = "http://52.79.239.25:8080/publish"  # EC2의 stream_server.py 엔드포인트
 PUBLISHER_ID = "cam01"  # 이 PC의 고유 ID (cam01, cam02 ... 로 구분)
 
 ICE_SERVERS = [
-    RTCIceServer(urls=f"stun:<TURN_HOST>:3478"),
-    RTCIceServer(urls=f"turn:<TURN_HOST>:3478?transport=udp", username="<TURN_USER>", credential="<TURN_PASS>"),
-    RTCIceServer(urls=f"turn:<TURN_HOST>:3478?transport=tcp", username="<TURN_USER>", credential="<TURN_PASS>"),
+    RTCIceServer(urls=f"stun:52.79.239.25:3478"),
+    RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=udp", username="webrtcuser", credential="webrtcpass"),
+    RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=tcp", username="webrtcuser", credential="webrtcpass"),
     # TLS 사용 시(선택):
     # RTCIceServer(urls=f"turns:<TURN_HOST>:5349?transport=tcp", username="<TURN_USER>", credential="<TURN_PASS>"),
 ]
@@ -24,7 +24,7 @@ def create_camera_player():
     sysname = platform.system().lower()
     if "darwin" in sysname or "mac" in sysname:
         return MediaPlayer("default", format="avfoundation",
-                           options={"framerate": "30", "video_size": "640x480"})
+                           options={"framerate": "30", "video_size": "1280x480"})
     if "linux" in sysname:
         return MediaPlayer("/dev/video0", format="v4l2",
                            options={"framerate": "30", "video_size": "640x480"})

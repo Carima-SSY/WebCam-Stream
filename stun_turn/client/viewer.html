@@ -35,9 +35,9 @@ async function start(){
 
   const pc = new RTCPeerConnection({
     iceServers: [
-      { urls: "stun:<TURN_HOST>:3478" },
-      { urls: "turn:<TURN_HOST>:3478?transport=udp", username:"<TURN_USER>", credential:"<TURN_PASS>" },
-      { urls: "turn:<TURN_HOST>:3478?transport=tcp", username:"<TURN_USER>", credential:"<TURN_PASS>" },
+      { urls: "stun:52.79.239.25:3478" },
+      { urls: "turn:52.79.239.25:3478?transport=udp", username:"webrtcuser", credential:"webrtcpass" },
+      { urls: "turn:52.79.239.25:3478?transport=tcp", username:"webrtcuser", credential:"webrtcpass" },
       // TLS(선택):
       // { urls: "turns:<TURN_HOST>:5349?transport=tcp", username:"<TURN_USER>", credential:"<TURN_PASS>" },
     ]
