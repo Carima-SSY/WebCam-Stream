@@ -23,8 +23,9 @@ RTC_CONFIG = RTCConfiguration(iceServers=ICE_SERVERS)
 def create_camera_player():
     sysname = platform.system().lower()
     if "darwin" in sysname or "mac" in sysname:
+        print("ACCESS webcam in MAC OS")
         return MediaPlayer("default", format="avfoundation",
-                           options={"framerate": "30", "video_size": "1280x480"})
+                           options={"framerate": "30", "video_size": "640x480"})
     if "linux" in sysname:
         return MediaPlayer("/dev/video0", format="v4l2",
                            options={"framerate": "30", "video_size": "640x480"})
@@ -36,6 +37,7 @@ def create_camera_player():
 async def main():
     pc = RTCPeerConnection(configuration=RTC_CONFIG)
     player = create_camera_player()
+    print("CREATE CAMERA PLAYER END!!!")
     if player is None or player.video is None:
         print("❌ 카메라 열기 실패")
         await pc.close()
