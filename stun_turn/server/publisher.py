@@ -25,7 +25,7 @@ def create_camera_player():
     if "darwin" in sysname or "mac" in sysname:
         print("ACCESS webcam in MAC OS")
         return MediaPlayer("default", format="avfoundation",
-                           options={"framerate": "30", "video_size": "640x480"})
+                           options={"framerate": "30", "video_size": "1280x720"})
     if "linux" in sysname:
         return MediaPlayer("/dev/video0", format="v4l2",
                            options={"framerate": "30", "video_size": "640x480"})
