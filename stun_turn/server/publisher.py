@@ -8,12 +8,12 @@ from aiohttp import ClientSession
 from aiortc import RTCPeerConnection, RTCSessionDescription, RTCConfiguration, RTCIceServer
 from aiortc.contrib.media import MediaPlayer
 
-STREAM_SERVER = "http://52.79.239.25:8080/publish"  # EC2의 stream_server.py 엔드포인트
-PUBLISHER_ID = "cam01"  # 이 PC의 고유 ID (cam01, cam02 ... 로 구분)
+STREAM_SERVER = "http://52.79.239.25:8080/publish"  # Signaling (STUN/TURN) Server Endpoint 
+PUBLISHER_ID = "cam01"  # local pc id 
 
 ICE_SERVERS = [
     RTCIceServer(urls=f"stun:52.79.239.25:3478"),
-    RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=udp", username="webrtcuser", credential="webrtcpass"),
+    RTCIceServer(urls=f"turn:52.79.239.25:3478?=udp", username="webrtcuser", credential="webrtcpass"),
     RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=tcp", username="webrtcuser", credential="webrtcpass"),
     # TLS 사용 시(선택):
     # RTCIceServer(urls=f"turns:<TURN_HOST>:5349?transport=tcp", username="<TURN_USER>", credential="<TURN_PASS>"),
@@ -39,7 +39,7 @@ async def main():
     player = create_camera_player()
     print("CREATE CAMERA PLAYER END!!!")
     if player is None or player.video is None:
-        print("❌ 카메라 열기 실패")
+        print("Open Camera Failure")
         await pc.close()
         return
 
@@ -65,13 +65,13 @@ async def main():
             STREAM_SERVER, data=json.dumps(payload), headers={"Content-Type": "application/json"}
         ) as resp:
             if resp.status != 200:
-                print("❌ 서버 응답 오류:", resp.status, await resp.text())
+                print("Server Response Error:", resp.status, await resp.text())
                 await pc.close()
                 return
             data = await resp.json()
 
     await pc.setRemoteDescription(RTCSessionDescription(sdp=data["sdp"], type=data["type"]))
-    print(f"✅ 퍼블리시 연결 완료 (publisher_id={PUBLISHER_ID}). Ctrl+C 로 종료")
+    print(f"Publisher Connection Successfully (publisher_id={PUBLISHER_ID}). Enter Ctrl+C to End Connnection")
 
     stop = asyncio.Event()
     for sig in (signal.SIGINT, signal.SIGTERM):
