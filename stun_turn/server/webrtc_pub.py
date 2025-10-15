@@ -57,7 +57,7 @@ class WebRTCPublisher:
                     return None
                 
                 return await resp.json()
-
+            
     async def _on_state_change(self):
         print("Publisher Connection State:", self.pc.connectionState)
         if self.pc.connectionState in ("failed", "closed", "disconnected"):

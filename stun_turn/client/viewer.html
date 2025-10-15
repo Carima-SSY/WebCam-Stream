@@ -72,7 +72,7 @@ async function start(){
   }
   const data = await resp.json();
   await pc.setRemoteDescription(data);
-  log("✅ 시청 시작");
+  log("Start Streaming");
 }
 
 startBtn.addEventListener('click', start);
