@@ -11,10 +11,19 @@ from aiortc.contrib.media import MediaPlayer
 STREAM_SERVER = "http://52.79.239.25:8080/publish"  # Signaling (STUN/TURN) Server Endpoint 
 PUBLISHER_ID = "cam01"  # local pc id 
 
+# ICE_SERVERS = [
+#     RTCIceServer(urls=f"stun:52.79.239.25:3478"),
+#     RTCIceServer(urls=f"turn:52.79.239.25:3478?=udp", username="webrtcuser", credential="webrtcpass"),
+#     RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=tcp", username="webrtcuser", credential="webrtcpass"),
+# ]
+
 ICE_SERVERS = [
     RTCIceServer(urls=f"stun:52.79.239.25:3478"),
-    RTCIceServer(urls=f"turn:52.79.239.25:3478?=udp", username="webrtcuser", credential="webrtcpass"),
+    RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=udp", username="webrtcuser", credential="webrtcpass"), 
     RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=tcp", username="webrtcuser", credential="webrtcpass"),
+    # ...
+    # TLS 사용 시(선택):
+    # RTCIceServer(urls=f"turns:<TURN_HOST>:5349?transport=tcp", username="<TURN_USER>", credential="<TURN_PASS>"),
 ]
 RTC_CONFIG = RTCConfiguration(iceServers=ICE_SERVERS)
 
@@ -104,6 +113,7 @@ class WebRTCPublisher:
         # Infinite Await
         self._setup_signal_handlers()
         await self.stop_event.wait()
+        await self.pc.close()
         
     def _setup_signal_handlers(self):
         loop = asyncio.get_event_loop()
@@ -114,12 +124,11 @@ class WebRTCPublisher:
                 pass # Windows에서는 signal handler가 지원되지 않을 수 있음
 
     async def stop(self):
-        if self.pc and self.pc.connectionState not in ("closed", "failed"):
-            await self.pc.close()
-        
         # Streaming Stop Event Occur
         self.stop_event.set()
-
+        
+        # if self.pc and self.pc.connectionState not in ("closed", "failed"): 
+        #     await self.pc.close()
 
 if __name__ == "__main__":
     publisher = WebRTCPublisher(publisher_id=PUBLISHER_ID, config=RTC_CONFIG)

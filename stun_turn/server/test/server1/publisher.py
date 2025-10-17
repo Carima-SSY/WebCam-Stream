@@ -13,8 +13,9 @@ PUBLISHER_ID = "cam01"  # local pc id
 
 ICE_SERVERS = [
     RTCIceServer(urls=f"stun:52.79.239.25:3478"),
-    RTCIceServer(urls=f"turn:52.79.239.25:3478?=udp", username="webrtcuser", credential="webrtcpass"),
+    RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=udp", username="webrtcuser", credential="webrtcpass"), 
     RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=tcp", username="webrtcuser", credential="webrtcpass"),
+    # ...
     # TLS 사용 시(선택):
     # RTCIceServer(urls=f"turns:<TURN_HOST>:5349?transport=tcp", username="<TURN_USER>", credential="<TURN_PASS>"),
 ]
