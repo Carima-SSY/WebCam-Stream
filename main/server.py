@@ -119,9 +119,6 @@ async def viewer_connect(request: ViewerRequest):
 
     return {"sdp": pc.localDescription.sdp, "type": pc.localDescription.type}
 
-@app.delete("/viewer")
-def viewer_disconnect(request: ViewerRequest):
-    pass
 
 if __name__ == "__main__":
     # uvicorn 서버 실행
