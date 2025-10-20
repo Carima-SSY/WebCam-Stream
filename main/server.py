@@ -139,6 +139,7 @@ async def viewer(request: ViewerRequest):
     return {"sdp": pc.localDescription.sdp, "type": pc.localDescription.type}
 
 
+# In a production/deployment environment, comment out the code below
 if __name__ == "__main__":
     # execute uvicorn
     import uvicorn
