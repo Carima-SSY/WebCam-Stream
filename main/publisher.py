@@ -19,15 +19,15 @@ except ImportError:
     print("Warning: picamera2 not installed. CSI direct connect unavailable.")
 
 
-# --- 전역 설정 상수 (클래스 외부에 유지) ---
+# --- global constant ---
 STREAM_SERVER = "http://52.79.239.25:8080/publish"  # Signaling (STUN/TURN) Server Endpoint 
 PUBLISHER_ID = "cam01"  # local pc id 
-TARGET_WIDTH, TARGET_HEIGHT = 640, 360 # 목표 해상도
+TARGET_WIDTH, TARGET_HEIGHT = 640, 360 # target resolution
 
 ICE_SERVERS = [
-    RTCIceServer(urls=f"stun:52.79.239.25:3478"),
-    RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=udp", username="webrtcuser", credential="webrtcpass"), 
-    RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=tcp", username="webrtcuser", credential="webrtcpass"),
+    RTCIceServer(urls=f"stun:<TURN_HOST>:3478"),
+    RTCIceServer(urls=f"turn:<TURN_HOST>:3478?transport=udp", username="<TURN_USER>", credential="<TURN_PASS>"), 
+    RTCIceServer(urls=f"turn:<TURN_HOST>:3478?transport=tcp", username="<TURN_USER>", credential="<TURN_PASS>"),
     # ...
     # TLS 사용 시(선택):
     # RTCIceServer(urls=f"turns:<TURN_HOST>:5349?transport=tcp", username="<TURN_USER>", credential="<TURN_PASS>"),
@@ -38,7 +38,7 @@ RTC_CONFIG = RTCConfiguration(iceServers=ICE_SERVERS)
 
 class Picam2Track(MediaStreamTrack):
     """
-    라즈베리 파이 CSI 카메라 모듈 3를 사용하는 커스텀 MediaStreamTrack.
+    MediaStreamTrack (using Raspberry PI CSI Camera Module 3)
     picamera2를 통해 하드웨어 가속을 활용합니다.
     """
     kind = "video"
@@ -48,7 +48,7 @@ class Picam2Track(MediaStreamTrack):
         print(f"Initializing Picamera2 for CSI stream: {width}x{height}")
         self.picam2 = Picamera2()
         
-        # BGR888 포맷으로 설정하여 OpenCV의 BGR 포맷과 호환되게 함
+        # set BGR888 format to be compatible with BGR format of OpenCV
         config = self.picam2.create_video_configuration(
             main={"size": (width, height), "format": "BGR888"},
             queue=False 
