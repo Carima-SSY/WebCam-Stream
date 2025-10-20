@@ -15,10 +15,12 @@ RTC_CONFIG = RTCConfiguration(iceServers=ICE_SERVERS)
 # =================================
 
 relay = MediaRelay()
-publishers = {}
+
+# add viewer_pc field for configuration of publishers' 1:1 relation
+publishers = {} 
 viewer_pcs = set()
 
-# Pydantic 모델 정의
+# Definition of Pydantic Model 
 class SDPOffer(BaseModel):
     sdp: str
     type: str
@@ -31,7 +33,7 @@ class ViewerRequest(SDPOffer):
 
 app = FastAPI()
 
-# CORS 설정
+# CORS Setting
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -47,23 +49,30 @@ async def health():
 @app.post("/publish")
 async def publish(request: PublishRequest):
     """
-    퍼블리셔가 publisher_id와 SDP offer를 POST로 보냄
+    Publisher (Webcam) sends publisher_id and SDP offer with POST Method
     """
     publisher_id = request.publisher_id
     if publisher_id in publishers:
-        # 기존 연결 정리 또는 오류 처리
+        # previous connection reset and process error
         await publishers[publisher_id]["pc"].close()
 
     pc = RTCPeerConnection(configuration=RTC_CONFIG)
     print(f"/publish: Access to {publisher_id}")
-    publishers[publisher_id] = {"pc": pc, "track": None}
+    # init viewer_pc for 1:1 connection limit
+    publishers[publisher_id] = {"pc": pc, "track": None, "viewer_pc": None} 
 
-    # 연결 상태 변경 시 콜백
+    # call back when connection state is changed
     @pc.on("connectionstatechange")
     async def on_state():
         print(f"publisher[{publisher_id}] state:", pc.connectionState)
         if pc.connectionState in ("failed", "closed", "disconnected"):
-            if publishers.get(publisher_id, {}).get("pc") is pc:
+            # 퍼블리셔가 끊어지면, 연결된 뷰어도 함께 끊어야 함 (1:1 보장)
+            pub_data = publishers.get(publisher_id, {})
+            if pub_data.get("viewer_pc"):
+                print(f"Closing viewer connection for {publisher_id}...")
+                await pub_data["viewer_pc"].close() # 뷰어 연결 강제 종료
+            
+            if pub_data.get("pc") is pc:
                 publishers.pop(publisher_id, None)
             await pc.close()
 
@@ -80,7 +89,7 @@ async def publish(request: PublishRequest):
                 publishers[publisher_id]["track"] = None
             print(f"End Publisher Video: {publisher_id}")
 
-    # SDP 처리
+    # Process SDP
     await pc.setRemoteDescription(RTCSessionDescription(sdp=request.sdp, type=request.type))
     answer = await pc.createAnswer()
     await pc.setLocalDescription(answer)
@@ -88,31 +97,41 @@ async def publish(request: PublishRequest):
     return {"sdp": pc.localDescription.sdp, "type": pc.localDescription.type}
 
 @app.post("/viewer")
-async def viewer_connect(request: ViewerRequest):
+async def viewer(request: ViewerRequest):
     target = request.target
     pub = publishers.get(target)
     
-    # 퍼블리셔가 없거나 트랙이 없는 경우
+    # if no publisher or no track 
     if not pub or not pub.get("track"):
         raise HTTPException(status_code=503, detail=f"No publisher track for {target}")
+
+    # limitation if 1:1 connection: check activated connection
+    if pub.get("viewer_pc") is not None:
+        raise HTTPException(status_code=409, detail=f"Publisher {target} is already connected to a viewer (1:1 limit).")
 
     pc = RTCPeerConnection(configuration=RTC_CONFIG)
     viewer_pcs.add(pc)
     print(f"/viewer: target={target}")
 
-    # 연결 상태 변경 시 콜백
+    # save viewer pc object in pub dict
+    pub["viewer_pc"] = pc 
+
+    # call back when connection state change 
     @pc.on("connectionstatechange")
     async def on_state():
         print("viewer state:", pc.connectionState)
         if pc.connectionState in ("failed", "closed", "disconnected"):
+            # if viewer is disconnected, set pub["viewer_pc"] = None to allow other connection
+            if pub.get("viewer_pc") is pc:
+                pub["viewer_pc"] = None 
             viewer_pcs.discard(pc)
             await pc.close()
 
-    # 퍼블리셔의 트랙을 relay를 통해 추가
+    # add publisher track with relay
     local_video = pub["track"]
     pc.addTrack(local_video)
 
-    # SDP 처리
+    # process SDP
     await pc.setRemoteDescription(RTCSessionDescription(sdp=request.sdp, type=request.type))
     answer = await pc.createAnswer()
     await pc.setLocalDescription(answer)
@@ -121,7 +140,7 @@ async def viewer_connect(request: ViewerRequest):
 
 
 if __name__ == "__main__":
-    # uvicorn 서버 실행
+    # execute uvicorn
     import uvicorn
     print("WebRTC Stream/Match Server running on http://0.0.0.0:8080")
     uvicorn.run(app, host="0.0.0.0", port=8080)

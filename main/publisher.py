@@ -24,11 +24,6 @@ STREAM_SERVER = "http://52.79.239.25:8080/publish"  # Signaling (STUN/TURN) Serv
 PUBLISHER_ID = "cam01"  # local pc id 
 TARGET_WIDTH, TARGET_HEIGHT = 640, 360 # 목표 해상도
 
-# ICE_SERVERS = [
-#     RTCIceServer(urls=f"stun:52.79.239.25:3478"),
-#     RTCIceServer(urls=f"turn:52.79.239.25:3478?=udp", username="webrtcuser", credential="webrtcpass"),
-#     RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=tcp", username="webrtcuser", credential="webrtcpass"),
-# ]
 ICE_SERVERS = [
     RTCIceServer(urls=f"stun:52.79.239.25:3478"),
     RTCIceServer(urls=f"turn:52.79.239.25:3478?transport=udp", username="webrtcuser", credential="webrtcpass"), 
@@ -110,7 +105,7 @@ def create_media_source():
         
     return None
 
-# --- 3. WebRTC Publisher 클래스 (수정 필요 없음) ---
+# --- 3. WebRTC Publisher 클래스 ---
 
 class WebRTCPublisher:
     def __init__(self, publisher_id: str, config: RTCConfiguration):
@@ -190,7 +185,9 @@ class WebRTCPublisher:
         # Infinite Await
         self._setup_signal_handlers()
         await self.stop_event.wait()
-        await self.pc.close()
+        
+        # 종료 이벤트 발생 시 여기서 pc.close()를 한 번 더 호출할 수 있음
+        await self.pc.close() 
         
         
     def _setup_signal_handlers(self):
@@ -209,8 +206,9 @@ class WebRTCPublisher:
         # Streaming Stop Event Occur
         self.stop_event.set()
         
-        # if self.pc and self.pc.connectionState not in ("closed", "failed"):
-        #     await self.pc.close()
+        # RTCPeerConnection을 명시적으로 종료합니다. (수정)
+        if self.pc and self.pc.connectionState not in ("closed", "failed"):
+             await self.pc.close() 
 
 
 if __name__ == "__main__":
