@@ -20,7 +20,7 @@ except ImportError:
 
 
 # --- global constant ---
-STREAM_SERVER = "http://52.79.239.25:8080/publish"  # Signaling (STUN/TURN) Server Endpoint 
+STREAM_SERVER = "http://<SERVER_HOST>:8080/publish"  # Signaling (STUN/TURN) Server Endpoint 
 PUBLISHER_ID = "cam01"  # local pc id 
 TARGET_WIDTH, TARGET_HEIGHT = 640, 360 # target resolution
 
