@@ -5,7 +5,7 @@
   <title>WebRTC Viewer (multi)</title>
   <style>
     body { font-family: sans-serif; text-align:center; margin-top: 20px; }
-    video { width: 640px; height: 480px; background:#000; border:1px solid #333; display:block; margin: 10px auto; }
+    video { width: 640px; height: 360px; background:#000; border:1px solid #333; display:block; margin: 10px auto; }
     input, button { font-size: 16px; padding: 6px 8px; }
     #log { width: 640px; height: 160px; margin: 12px auto; display:block; }
   </style>
@@ -16,7 +16,8 @@
     <input id="publisherId" placeholder="publisher_id (예: cam01)" />
     <input id="serverHost" placeholder="stream server host (예: 3.12.34.56)" />
     <button id="startBtn">시청 시작</button>
-    <button id="stopBtn" disabled>시청 종료</button> </div>
+    <button id="stopBtn" disabled>시청 중지</button> <button id="resetBtn" disabled>연결 강제 해제</button>
+  </div>
   <video id="video" autoplay playsinline muted></video>
   <textarea id="log" readonly></textarea>
 
@@ -24,42 +25,104 @@
 const video = document.getElementById('video');
 const logBox = document.getElementById('log');
 const startBtn = document.getElementById('startBtn');
-const stopBtn = document.getElementById('stopBtn'); // 추가
+const stopBtn = document.getElementById('stopBtn'); // ✨ 시청 중지 버튼 변수 추가
+const resetBtn = document.getElementById('resetBtn'); 
+let pc = null; 
 
-let pc = null; // RTCPeerConnection 객체를 담을 변수 // 추가
+function log(...args){ 
+  const s = args.map(x => typeof x === 'string' ? x : JSON.stringify(x)).join(' ');
+  logBox.value += s + '\n'; 
+  logBox.scrollTop = logBox.scrollHeight; 
+  console.log(...args); 
+}
 
-function log(...args){ const s=args.map(x=>typeof x==='string'?x:JSON.stringify(x)).join(' ');
-  logBox.value += s + '\n'; logBox.scrollTop = logBox.scrollHeight; console.log(...args); }
+// ✨ 서버의 force_unlock API를 호출하는 함수 (재연결 문제 우회용)
+async function forceReset() {
+    const publisherId = document.getElementById('publisherId').value.trim();
+    const serverHost  = document.getElementById('serverHost').value.trim();
+
+    resetBtn.disabled = true; 
+
+    try {
+        const resp = await fetch(`http://${serverHost}:8080/force_unlock/${publisherId}`, {
+            method: "POST",
+            headers: {"Content-Type":"application/json"},
+        });
+        const data = await resp.json();
+        log(`Force Reset Success: ${data.message}`);
+        startBtn.disabled = false; 
+    } catch(e) {
+        log("Force Reset Failed:", e.message);
+    }
+}
+
+// ✨ 시청 중지 함수: 연결을 명시적으로 종료합니다.
+function stop() {
+    if (pc) {
+        log("Stopping stream (pc.close() called).");
+        pc.close(); // WebRTC 연결 종료
+        pc = null;
+        video.srcObject = null;
+    }
+    stopBtn.disabled = true;
+    startBtn.disabled = false;
+    resetBtn.disabled = false; // 연결 종료 후 강제 해제 버튼도 활성화
+}
+
 
 async function start(){
   const publisherId = document.getElementById('publisherId').value.trim();
   const serverHost  = document.getElementById('serverHost').value.trim();
   if(!publisherId || !serverHost){ alert("publisher_id와 server host를 입력하세요."); return; }
-  
-  // 이미 연결 중이라면 기존 연결 종료
-  if(pc) await stop(); 
 
-  pc = new RTCPeerConnection({ // pc 변수 사용으로 변경
+  if (pc) {
+      log("Closing existing PC before new connection.");
+      pc.close();
+      pc = null;
+  }
+  
+  // 버튼 상태 초기화
+  startBtn.disabled = true;
+  stopBtn.disabled = true;
+  resetBtn.disabled = true; 
+
+  pc = new RTCPeerConnection({
+    // 서버와 동일한 IP 주소로 통일 (3.34.163.192)
     iceServers: [
       { urls: "stun:3.34.163.192:3478" },
       { urls: "turn:3.34.163.192:3478?transport=udp", username:"webrtcuser", credential:"webrtcpass" },
       { urls: "turn:3.34.163.192:3478?transport=tcp", username:"webrtcuser", credential:"webrtcpass" },
-      // TLS(선택):
-      // { urls: "turns:<TURN_HOST>:5349?transport=tcp", username:"<TURN_USER>", credential:"<TURN_PASS>" },
     ]
   });
-
+    
+  // 연결 상태 변경 시 재연결 지연 로직 (6초 유지)
   pc.onconnectionstatechange = () => {
       log("conn:", pc.connectionState);
+      
       if (pc.connectionState === 'closed' || pc.connectionState === 'failed' || pc.connectionState === 'disconnected') {
-          // 연결 종료 시 버튼 상태 업데이트 및 비디오 해제
-          if(pc) pc.close(); // 안전을 위해 추가
+          log("Connection terminated. Delaying re-enable by 6 seconds.");
+          
+          if(pc) pc.close(); 
           pc = null;
-          stopBtn.disabled = true;
-          startBtn.disabled = false;
           video.srcObject = null; 
+
+          // 6초 후 startBtn 활성화 로직
+          startBtn.disabled = true; 
+          setTimeout(() => {
+              log("Re-enabling '시청 시작' button after 6s delay.");
+              if (pc === null) startBtn.disabled = false; // 현재 연결이 없어야 활성화
+          }, 6000); 
+
+          // 연결이 끊어졌으므로 stopBtn 비활성화, resetBtn 활성화
+          stopBtn.disabled = true;
+          resetBtn.disabled = false;
+      } else if (pc.connectionState === 'connected') {
+          // 연결 성공 시 중지 버튼 활성화
+          stopBtn.disabled = false;
+          startBtn.disabled = true;
       }
-  };
+  }; 
+    
   pc.oniceconnectionstatechange = () => log("ice:", pc.iceConnectionState);
   pc.onicecandidate = e => { if(e.candidate) log("cand:", e.candidate.candidate); };
 
@@ -69,48 +132,49 @@ async function start(){
     else video.srcObject = new MediaStream([ev.track]);
   };
 
-  // 서버 비디오 수신 준비 (video m-line 보장)
   pc.addTransceiver("video", { direction: "recvonly" });
 
   const offer = await pc.createOffer();
   await pc.setLocalDescription(offer);
 
-  const resp = await fetch(`http://${serverHost}:8080/viewer`, {
-    method: "POST",
-    headers: {"Content-Type":"application/json"},
-    body: JSON.stringify({ target: publisherId, sdp: pc.localDescription.sdp, type: pc.localDescription.type }),
-  });
-  if(!resp.ok){
-    const t = await resp.text();
-    log("server error:", resp.status, t);
-    alert(`Server ${resp.status}: ${t}`);
-    await stop(); // 실패 시 연결 정리
-    return;
+  try {
+      const resp = await fetch(`http://${serverHost}:8080/viewer`, {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({ target: publisherId, sdp: pc.localDescription.sdp, type: pc.localDescription.type }),
+      });
+      
+      if(!resp.ok){
+        const t = await resp.text();
+        log("server error:", resp.status, t);
+        alert(`Server ${resp.status}: ${t}`);
+        
+        if (pc) pc.close(); 
+        
+        // 409 오류 시 리셋 버튼 활성화
+        if (resp.status === 409) {
+            resetBtn.disabled = false;
+        } else {
+            startBtn.disabled = false; // 409 외의 오류는 즉시 재시도 가능하도록
+        }
+        return;
+      }
+      const data = await resp.json();
+      await pc.setRemoteDescription(data);
+      log("Start Streaming");
+      
+  } catch(e) {
+      log("Fetch failed:", e.message);
+      alert(`Network error: ${e.message}`);
+      
+      if (pc) pc.close(); 
+      startBtn.disabled = false; // 네트워크 오류는 즉시 재시도 가능
   }
-  const data = await resp.json();
-  await pc.setRemoteDescription(data);
-  log("Start Streaming");
-  
-  // 성공 시 버튼 상태 변경
-  stopBtn.disabled = false; 
-  startBtn.disabled = true;
-}
-
-// 연결 해제 함수 추가
-async function stop() {
-  if (pc) {
-    log("Stopping WebRTC connection...");
-    pc.close();
-    pc = null; // 객체 해제
-    video.srcObject = null; // 비디오 스트림 해제
-    log("Connection closed.");
-  }
-  stopBtn.disabled = true;
-  startBtn.disabled = false;
 }
 
 startBtn.addEventListener('click', start);
-stopBtn.addEventListener('click', stop); // Stop 버튼 이벤트 리스너 추가
+stopBtn.addEventListener('click', stop); // ✨ 시청 중지 이벤트 리스너 추가
+resetBtn.addEventListener('click', forceReset); 
 </script>
 </body>
 </html>

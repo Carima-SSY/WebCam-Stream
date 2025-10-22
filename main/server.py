@@ -16,11 +16,11 @@ RTC_CONFIG = RTCConfiguration(iceServers=ICE_SERVERS)
 
 relay = MediaRelay()
 
-# add viewer_pc field for configuration of publishers' 1:1 relation
-publishers = {} 
+# publisher / viewer 관리 딕셔너리
+publishers = {}
 viewer_pcs = set()
 
-# Definition of Pydantic Model 
+# ================= Pydantic Models =================
 class SDPOffer(BaseModel):
     sdp: str
     type: str
@@ -30,74 +30,88 @@ class PublishRequest(SDPOffer):
 
 class ViewerRequest(SDPOffer):
     target: str
+# ===================================================
 
 app = FastAPI()
 
-# ========= CORS Setting ============
-# Set Origins 
+# ========= CORS ============
 origins = [
-    "http://localhost:5173",  
+    "http://localhost:5173",
     "http://localhost:3000",
 ]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# ===================================
-
+# ===========================
 
 @app.get("/health")
 async def health():
     return {"status": "ok"}
 
+
+# ===================================================
+#                   PUBLISH
+# ===================================================
 @app.post("/publish")
 async def publish(request: PublishRequest):
-    """
-    Publisher (Webcam) sends publisher_id and SDP offer with POST Method
-    """
     publisher_id = request.publisher_id
+
+    # 이전 publisher 세션이 남아 있다면 닫기
     if publisher_id in publishers:
-        # previous connection reset and process error
-        await publishers[publisher_id]["pc"].close()
+        try:
+            await publishers[publisher_id]["pc"].close()
+        except Exception:
+            pass
+        publishers.pop(publisher_id, None)
 
     pc = RTCPeerConnection(configuration=RTC_CONFIG)
     print(f"/publish: Access to {publisher_id}")
-    
-    # init viewer_pc for 1:1 connection limit
-    # add Lock object and save to dict
+
     publishers[publisher_id] = {
-        "pc": pc, 
+        "pc": pc,
         "track": None,
-        "viewer_pc": None, 
+        "original_track": None,
+        "viewer_pc": None,
         "lock": asyncio.Lock()
-    } 
+    }
     pub = publishers[publisher_id]
-    
-    # call back when connection state is changed
+
+    # connection state 변경 시
     @pc.on("connectionstatechange")
     async def on_state():
         print(f"publisher[{publisher_id}] state:", pc.connectionState)
         if pc.connectionState in ("failed", "closed", "disconnected"):
             if publishers.get(publisher_id, {}).get("pc") is pc:
-                publishers.pop(publisher_id, None)
-                
-            # when Publisher end, clean viewer PC
-            viewer_pc_to_close = pub.get("viewer_pc")
-            if viewer_pc_to_close:
-                await viewer_pc_to_close.close()
+                pub = publishers.pop(publisher_id, None)
+
+            # viewer 연결도 같이 닫기
+            if pub:
+                viewer_pc_to_close = pub.get("viewer_pc")
+                if viewer_pc_to_close:
+                    await viewer_pc_to_close.close()
+
+                # 🔥 relay 트랙 정리
+                if pub.get("track"):
+                    try:
+                        pub["track"].stop()
+                    except Exception:
+                        pass
+                    pub["track"] = None
+                    pub["original_track"] = None
 
             await pc.close()
 
-    # Callback when receive track
+    # Publisher 트랙 수신
     @pc.on("track")
     def on_track(track):
         print(f"Receive Publisher Track: {publisher_id}, kind={track.kind}")
         if track.kind == "video":
-            pub["track"] = relay.subscribe(track) # Manage with Relay
+            pub["original_track"] = track  # ✅ 원본 트랙 저장
+            pub["track"] = relay.subscribe(track)
 
         @track.on("ended")
         async def on_ended():
@@ -105,61 +119,65 @@ async def publish(request: PublishRequest):
                 pub["track"] = None
             print(f"End Publisher Video: {publisher_id}")
 
-    # Process SDP
+    # SDP 처리
     await pc.setRemoteDescription(RTCSessionDescription(sdp=request.sdp, type=request.type))
     answer = await pc.createAnswer()
     await pc.setLocalDescription(answer)
 
     return {"sdp": pc.localDescription.sdp, "type": pc.localDescription.type}
 
+
+# ===================================================
+#                   VIEWER
+# ===================================================
 @app.post("/viewer")
 async def viewer(request: ViewerRequest):
     target = request.target
     pub = publishers.get(target)
-    
-    # if no publisher or no track 
+
     if not pub or not pub.get("track"):
         raise HTTPException(status_code=503, detail=f"No publisher track for {target}")
 
-    # limitation if 1:1 connection: check activated connection
-    if pub.get("viewer_pc") is not None:
-        raise HTTPException(status_code=409, detail=f"Publisher {target} is already connected to a viewer (1:1 limit).")
-
-    # using Lock for maintaining 1:1 connection state
-    async with pub["lock"]: 
-        # limitation if 1:1 connection: check activated connection
+    async with pub["lock"]:
         if pub.get("viewer_pc") is not None:
-            raise HTTPException(status_code=409, detail=f"Publisher {target} is already connected to a viewer (1:1 limit).")
-            
+            raise HTTPException(status_code=409, detail=f"Publisher {target} already has a viewer (1:1 limit).")
+
         pc = RTCPeerConnection(configuration=RTC_CONFIG)
         viewer_pcs.add(pc)
-        pub["viewer_pc"] = pc # save new pc object (safety)
+        pub["viewer_pc"] = pc
 
-    # pc = RTCPeerConnection(configuration=RTC_CONFIG)
-    # viewer_pcs.add(pc)
     print(f"/viewer: target={target}")
 
-    # save viewer pc object in pub dict
-    # pub["viewer_pc"] = pc 
-
-    # call back when connection state change 
     @pc.on("connectionstatechange")
     async def on_state():
-        print("viewer state:", pc.connectionState)
+        import datetime
+        print(f"[{datetime.datetime.now().time()}] viewer state: {pc.connectionState}")
+
         if pc.connectionState in ("failed", "closed", "disconnected"):
             viewer_pcs.discard(pc)
-            
-            # init state safely by accepting lock (because of Memory Leak)
-            async with pub["lock"]: 
+            async with pub["lock"]:
                 if pub.get("viewer_pc") is pc:
-                    pub["viewer_pc"] = None # init pub's viewer_pc state to None
+                    pub["viewer_pc"] = None
+
+                # 🔥 viewer 종료 시 relay 트랙까지 정리
+                if pub.get("track"):
+                    try:
+                        pub["track"].stop()
+                    except Exception:
+                        pass
+                    pub["track"] = None
+
             await pc.close()
 
-    # add publisher track with relay
-    local_video = pub["track"]
+    # ✅ 새 relay 구독 트랙 생성
+    if pub.get("original_track") is None:
+        raise HTTPException(status_code=503, detail=f"No original track for {target}")
+
+    local_video = relay.subscribe(pub["original_track"])
+    pub["track"] = local_video  # 새 트랙으로 갱신
     pc.addTrack(local_video)
 
-    # process SDP
+    # SDP 처리
     await pc.setRemoteDescription(RTCSessionDescription(sdp=request.sdp, type=request.type))
     answer = await pc.createAnswer()
     await pc.setLocalDescription(answer)
@@ -167,9 +185,64 @@ async def viewer(request: ViewerRequest):
     return {"sdp": pc.localDescription.sdp, "type": pc.localDescription.type}
 
 
-# In a production/deployment environment, comment out the code below
+# ===================================================
+#                   MANAGEMENT
+# ===================================================
+@app.get("/viewers_count")
+async def viewers_count():
+    return {"count": len(viewer_pcs)}
+
+
+@app.get("/viewers_detail")
+async def viewers_detail():
+    details = []
+    for pc in viewer_pcs:
+        details.append({
+            "pc_id": id(pc),
+            "connection_state": pc.connectionState,
+            "is_tracked_by_publisher": any(
+                pub.get("viewer_pc") is pc
+                for pub in publishers.values()
+            )
+        })
+    return {"connections": details}
+
+
+@app.post("/force_unlock/{target}")
+async def force_unlock(target: str):
+    """
+    특정 퍼블리셔의 뷰어 연결 상태를 강제로 초기화하고 MediaRelay 트랙을 정리합니다.
+    """
+    pub = publishers.get(target)
+    if not pub:
+        raise HTTPException(status_code=404, detail=f"Publisher {target} not found.")
+
+    async with pub["lock"]:
+        viewer_pc_to_close = pub.get("viewer_pc")
+        if viewer_pc_to_close:
+            await viewer_pc_to_close.close()
+            viewer_pcs.discard(viewer_pc_to_close)
+
+        pub["viewer_pc"] = None
+
+        if pub.get("track"):
+            pub["track"].stop()
+            pub["track"] = None
+
+        if pub.get("original_track"):
+            try:
+                pub["original_track"].stop()
+            except Exception:
+                pass
+            pub["original_track"] = None
+
+    return {"status": "ok", "message": f"Viewer lock and track for {target} have been reset."}
+
+
+# ===================================================
+#                   ENTRY POINT
+# ===================================================
 if __name__ == "__main__":
-    # execute uvicorn
     import uvicorn
     print("WebRTC Stream/Match Server running on http://0.0.0.0:8080")
     uvicorn.run(app, host="0.0.0.0", port=8080)

