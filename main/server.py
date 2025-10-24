@@ -80,7 +80,32 @@ async def publish(request: PublishRequest):
     }
     pub = publishers[publisher_id]
 
-    # connection state 변경 시
+    # connection state change
+    # @pc.on("connectionstatechange")
+    # async def on_state():
+    #     print(f"publisher[{publisher_id}] state:", pc.connectionState)
+    #     if pc.connectionState in ("failed", "closed", "disconnected"):
+    #         if publishers.get(publisher_id, {}).get("pc") is pc:
+    #             pub = publishers.pop(publisher_id, None)
+
+    #         # viewer connection end 
+    #         if pub:
+    #             viewer_pc_to_close = pub.get("viewer_pc")
+    #             if viewer_pc_to_close:
+    #                 await viewer_pc_to_close.close()
+
+    #             # clean relay track 
+    #             if pub.get("track"):
+    #                 try:
+    #                     pub["track"].stop()
+    #                 except Exception:
+    #                     pass
+    #                 pub["track"] = None
+    #                 pub["original_track"] = None
+
+    #         await pc.close()
+    
+    # publisher connection state call back
     @pc.on("connectionstatechange")
     async def on_state():
         print(f"publisher[{publisher_id}] state:", pc.connectionState)
@@ -88,36 +113,43 @@ async def publish(request: PublishRequest):
             if publishers.get(publisher_id, {}).get("pc") is pc:
                 pub = publishers.pop(publisher_id, None)
 
-            # viewer 연결도 같이 닫기
             if pub:
+                # viewer connection end
                 viewer_pc_to_close = pub.get("viewer_pc")
                 if viewer_pc_to_close:
                     await viewer_pc_to_close.close()
 
-                # 🔥 relay 트랙 정리
+                # if publisher end, relay track absolute stop
                 if pub.get("track"):
                     try:
                         pub["track"].stop()
                     except Exception:
                         pass
                     pub["track"] = None
+
+                if pub.get("original_track"):
+                    try:
+                        pub["original_track"].stop()
+                    except Exception:
+                        pass
                     pub["original_track"] = None
 
             await pc.close()
-
     # Publisher 트랙 수신
     @pc.on("track")
     def on_track(track):
         print(f"Receive Publisher Track: {publisher_id}, kind={track.kind}")
         if track.kind == "video":
-            pub["original_track"] = track  # ✅ 원본 트랙 저장
-            pub["track"] = relay.subscribe(track)
+            pub["original_track"] = track  # save original track
+            pub["track"] = relay.subscribe(track) # create relay pub track
 
         @track.on("ended")
         async def on_ended():
-            if pub.get("track") is track:
-                pub["track"] = None
+            # if pub.get("track") is track:
+            #     pub["track"] = None
             print(f"End Publisher Video: {publisher_id}")
+            pub["track"] = None
+            pub["original_track"] = None
 
     # SDP 처리
     await pc.setRemoteDescription(RTCSessionDescription(sdp=request.sdp, type=request.type))
@@ -159,25 +191,26 @@ async def viewer(request: ViewerRequest):
                 if pub.get("viewer_pc") is pc:
                     pub["viewer_pc"] = None
 
-                # 🔥 viewer 종료 시 relay 트랙까지 정리
-                if pub.get("track"):
-                    try:
-                        pub["track"].stop()
-                    except Exception:
-                        pass
-                    pub["track"] = None
+                # if viewer end, clean relay track
+                # if pub.get("track"):
+                #     try:
+                #         pub["track"].stop()
+                #     except Exception:
+                #         pass
+                #     pub["track"] = None
 
             await pc.close()
 
-    # ✅ 새 relay 구독 트랙 생성
-    if pub.get("original_track") is None:
-        raise HTTPException(status_code=503, detail=f"No original track for {target}")
+    # create new relay pub track
+    # if pub.get("original_track") is None:
+    #     raise HTTPException(status_code=503, detail=f"No original track for {target}")
 
+    # if viewer connect, create new relay pub track
     local_video = relay.subscribe(pub["original_track"])
-    pub["track"] = local_video  # 새 트랙으로 갱신
+    pub["track"] = local_video  # update new track
     pc.addTrack(local_video)
 
-    # SDP 처리
+    # process SDP
     await pc.setRemoteDescription(RTCSessionDescription(sdp=request.sdp, type=request.type))
     answer = await pc.createAnswer()
     await pc.setLocalDescription(answer)
@@ -209,10 +242,7 @@ async def viewers_detail():
 
 
 @app.post("/force_unlock/{target}")
-async def force_unlock(target: str):
-    """
-    특정 퍼블리셔의 뷰어 연결 상태를 강제로 초기화하고 MediaRelay 트랙을 정리합니다.
-    """
+async def force_unlock(target: str):    
     pub = publishers.get(target)
     if not pub:
         raise HTTPException(status_code=404, detail=f"Publisher {target} not found.")
@@ -224,20 +254,12 @@ async def force_unlock(target: str):
             viewer_pcs.discard(viewer_pc_to_close)
 
         pub["viewer_pc"] = None
+        # if publisher alive, relay do not stop
 
-        if pub.get("track"):
-            pub["track"].stop()
-            pub["track"] = None
-
-        if pub.get("original_track"):
-            try:
-                pub["original_track"].stop()
-            except Exception:
-                pass
-            pub["original_track"] = None
-
-    return {"status": "ok", "message": f"Viewer lock and track for {target} have been reset."}
-
+    return {
+        "status": "ok",
+        "message": f"Viewer lock for {target} has been reset (relay preserved).",
+    }
 
 # ===================================================
 #                   ENTRY POINT
