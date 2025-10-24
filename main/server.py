@@ -16,7 +16,7 @@ RTC_CONFIG = RTCConfiguration(iceServers=ICE_SERVERS)
 
 relay = MediaRelay()
 
-# publisher / viewer 관리 딕셔너리
+# publisher / viewer mangement dictionary
 publishers = {}
 viewer_pcs = set()
 

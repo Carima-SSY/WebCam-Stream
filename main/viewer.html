@@ -89,9 +89,9 @@ async function start(){
   pc = new RTCPeerConnection({
     // 서버와 동일한 IP 주소로 통일 (3.34.163.192)
     iceServers: [
-      { urls: "stun:3.34.163.192:3478" },
-      { urls: "turn:3.34.163.192:3478?transport=udp", username:"webrtcuser", credential:"webrtcpass" },
-      { urls: "turn:3.34.163.192:3478?transport=tcp", username:"webrtcuser", credential:"webrtcpass" },
+      { urls: "stun:<TURN_HOST>:3478" },
+      { urls: "turn:<TURN_HOST>:3478?transport=udp", username:"<TURN_USER>", credential:"<TURN_PASS>" },
+      { urls: "turn:<TURN_HOST>:3478?transport=tcp", username:"<TURN_USER>", credential:"<TURN_PASS>" },
     ]
   });
     
