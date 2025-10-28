@@ -6,11 +6,11 @@ import sys
 import numpy as np
 import time
 
-# aiortc 및 picamera2 관련 모듈 임포트
+# import module related to aiortc and picamera2
 from aiohttp import ClientSession
 from aiortc import RTCPeerConnection, RTCSessionDescription, RTCConfiguration, RTCIceServer
 from aiortc.contrib.media import MediaPlayer, MediaStreamTrack
-from av import VideoFrame # av 라이브러리가 VideoFrame 처리를 담당
+from av import VideoFrame # process VideoFrame
 try:
     from picamera2 import Picamera2
     PI_CAMERA_AVAILABLE = True
@@ -39,7 +39,7 @@ RTC_CONFIG = RTCConfiguration(iceServers=ICE_SERVERS)
 class Picam2Track(MediaStreamTrack):
     """
     MediaStreamTrack (using Raspberry PI CSI Camera Module 3)
-    picamera2를 통해 하드웨어 가속을 활용합니다.
+    use hardware acceleration with pi camera2
     """
     kind = "video"
 
@@ -57,13 +57,13 @@ class Picam2Track(MediaStreamTrack):
         self.picam2.start()
 
     async def recv(self):
-        # aiortc가 요구하는 VideoFrame 객체를 반환
-        
-        # 1. 프레임 캡처 (NumPy 배열)
+        # return VideoFrame class object that aiortc require
+                
+        # First, capture frame (NumPy array)
         frame_data = self.picam2.capture_array()
         
-        # 2. av.VideoFrame 객체로 변환
-        # Picamera2는 BGR 순서로 데이터를 반환하므로 'bgr24' 포맷 지정
+        # Second, return av.VideoFrame class object
+        # select format to bgr24 because Picamera2 return data to BGR sequence 
         frame = VideoFrame.from_ndarray(frame_data, format="bgr24")
         
         return frame
