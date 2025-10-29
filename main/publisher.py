@@ -87,19 +87,20 @@ def create_media_source():
         # Picam2Track 커스텀 객체 반환 (CSI 직결)
         return Picam2Track(TARGET_WIDTH, TARGET_HEIGHT)
     
-    # 2. Linux 환경 (USB 웹캠 등)
+    # 2. Linux Env
     if "linux" in sysname:
         # USB 웹캠용 MediaPlayer 반환
         return MediaPlayer("/dev/video0", format="v4l2",
                            options={"framerate": "30", "video_size": f"{TARGET_WIDTH}x{TARGET_HEIGHT}"})
 
-    # 3. macOS 환경
+    # 3. macOS Env
     if "darwin" in sysname or "mac" in sysname:
         return MediaPlayer("default", format="avfoundation",
                            options={"framerate": "30", "video_size": "1280x720"})
 
-    # 4. Windows 환경
+    # 4. Windows Env
     if "windows" in sysname:
+        # "video=Integrated Camera" may be changed because of real camera name 
         return MediaPlayer("video=Integrated Camera", format="dshow",
                            options={"video_size": f"{TARGET_WIDTH}x{TARGET_HEIGHT}", "framerate": "30"})
         
