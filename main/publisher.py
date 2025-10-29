@@ -34,7 +34,7 @@ ICE_SERVERS = [
 ]
 RTC_CONFIG = RTCConfiguration(iceServers=ICE_SERVERS)
 
-# --- 1. CSI 직결을 위한 커스텀 미디어 트랙 (Picamera2 사용) ---
+# --- custom media track for CSI connnection (using Picamera2) ---
 
 class Picam2Track(MediaStreamTrack):
     """
@@ -69,13 +69,13 @@ class Picam2Track(MediaStreamTrack):
         return frame
 
     def stop(self):
-        # 자원 해제
+        # resource deactivated
         self.picam2.stop()
         print("Picamera2 stopped.")
         super().stop()
 
 
-# --- 2. OS에 따라 카메라 객체를 생성하는 통합 함수 ---
+# --- create media source (window, mac, linux) ---
 
 def create_media_source():
     """OS에 따라 가장 적합한 카메라 미디어 트랙 소스를 생성하여 반환합니다."""
@@ -142,12 +142,12 @@ class WebRTCPublisher:
     async def run(self):
         self.pc = RTCPeerConnection(configuration=self.config)
         
-        # 수정된 함수 호출
+        # create media source
         self.media_source = create_media_source()
         
         print("CREATE MEDIA SOURCE END!!!")
         
-        # MediaStreamTrack 객체 확인 (Picam2Track 또는 MediaPlayer)
+        # check MediaStreamTrack Object (Picam2Track or MediaPlayer)
         video_track = self.media_source.video if isinstance(self.media_source, MediaPlayer) else self.media_source
 
         if video_track is None:
@@ -174,7 +174,7 @@ class WebRTCPublisher:
             await self.stop()
             return
             
-        # 3. Remote SDP (Answer) 설정
+        # set Remote SDP (Answer)
         await self.pc.setRemoteDescription(
             RTCSessionDescription(sdp=answer_data["sdp"], type=answer_data["type"])
         )
@@ -186,7 +186,7 @@ class WebRTCPublisher:
         self._setup_signal_handlers()
         await self.stop_event.wait()
         
-        # 종료 이벤트 발생 시 여기서 pc.close()를 한 번 더 호출할 수 있음
+        # when stop event occur, pc.close() call one time more
         await self.pc.close() 
         
         
@@ -199,14 +199,14 @@ class WebRTCPublisher:
                 pass 
 
     async def stop(self):
-        # Picam2Track의 stop 호출 (MediaPlayer는 stop()이 필요 없음)
+        # call stop method in Picam2Track (MediaPlayer do not need to call stop())
         if hasattr(self.media_source, 'stop'):
              self.media_source.stop()
 
         # Streaming Stop Event Occur
         self.stop_event.set()
         
-        # RTCPeerConnection을 명시적으로 종료합니다. (수정)
+        # stop and close RTCPeerConnection
         if self.pc and self.pc.connectionState not in ("closed", "failed"):
              await self.pc.close() 
 
