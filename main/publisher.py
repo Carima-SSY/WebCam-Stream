@@ -22,7 +22,7 @@ except ImportError:
 # --- global constant ---
 STREAM_SERVER = "http://<SERVER_HOST>:8080/publish"  # Signaling (STUN/TURN) Server Endpoint 
 PUBLISHER_ID = "cam01"  # local pc id 
-TARGET_WIDTH, TARGET_HEIGHT = 640, 360 # target resolution
+TARGET_WIDTH, TARGET_HEIGHT = 640, 480 # target resolution
 
 ICE_SERVERS = [
     RTCIceServer(urls=f"stun:<TURN_HOST>:3478"),
