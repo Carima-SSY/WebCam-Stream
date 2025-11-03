@@ -2,7 +2,7 @@ import asyncio
 import json
 import platform
 import signal
-import sys
+import sys, os
 import numpy as np
 import time
 
@@ -17,20 +17,32 @@ try:
 except ImportError:
     PI_CAMERA_AVAILABLE = False
     print("Warning: picamera2 not installed. CSI direct connect unavailable.")
-
-
+    
 # --- global constant ---
-STREAM_SERVER = "http://<SERVER_HOST>:8080/publish"  # Signaling (STUN/TURN) Server Endpoint 
-PUBLISHER_ID = "cam01"  # local pc id 
-TARGET_WIDTH, TARGET_HEIGHT = 640, 480 # target resolution
+def get_resource_path(relative_path):
+    if getattr(sys, 'frozen', False):
+        base_path = os.path.dirname(sys.executable)
+    else:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+def set_publisher_config():
+    with open(get_resource_path('pub-config.json'), 'r', encoding='utf-8') as file:
+        pub_cfg = json.load(file) 
+        
+    return pub_cfg['host']['ip'], pub_cfg['host']['user'], pub_cfg['host']['pass'], pub_cfg['publisher']['id'], pub_cfg['video']['type'], pub_cfg['video']['resol']['width'], pub_cfg['video']['resol']['height']
+HOST_IP, HOST_USER, HOST_PASS, PUB_ID, VIDEO, WIDTH, HEIGHT = set_publisher_config()
+
+STREAM_SERVER = f"http://{HOST_IP}:8080/publish"  
 
 ICE_SERVERS = [
-    RTCIceServer(urls=f"stun:<TURN_HOST>:3478"),
-    RTCIceServer(urls=f"turn:<TURN_HOST>:3478?transport=udp", username="<TURN_USER>", credential="<TURN_PASS>"), 
-    RTCIceServer(urls=f"turn:<TURN_HOST>:3478?transport=tcp", username="<TURN_USER>", credential="<TURN_PASS>"),
+    RTCIceServer(urls=f"stun:{HOST_IP}:3478"),
+    RTCIceServer(urls=f"turn:{HOST_IP}:3478?transport=udp", username=f"{HOST_USER}", credential=f"{HOST_PASS}"), 
+    RTCIceServer(urls=f"turn:{HOST_IP}:3478?transport=tcp", username=f"{HOST_USER}", credential=f"{HOST_PASS}"),
     # ...
     # TLS 사용 시(선택):
-    # RTCIceServer(urls=f"turns:<TURN_HOST>:5349?transport=tcp", username="<TURN_USER>", credential="<TURN_PASS>"),
+    # RTCIceServer(urls=f"turns:{HOST_IP}:5349?transport=tcp", username=f"{HOST_USER}", credential=f"{HOST_PASS}"),
 ]
 RTC_CONFIG = RTCConfiguration(iceServers=ICE_SERVERS)
 
@@ -43,7 +55,7 @@ class Picam2Track(MediaStreamTrack):
     """
     kind = "video"
 
-    def __init__(self, width=TARGET_WIDTH, height=TARGET_HEIGHT):
+    def __init__(self, width=WIDTH, height=HEIGHT):
         super().__init__()
         print(f"Initializing Picamera2 for CSI stream: {width}x{height}")
         self.picam2 = Picamera2()
@@ -78,31 +90,27 @@ class Picam2Track(MediaStreamTrack):
 # --- create media source (window, mac, linux) ---
 
 def create_media_source():
-    """OS에 따라 가장 적합한 카메라 미디어 트랙 소스를 생성하여 반환합니다."""
     sysname = platform.system().lower()
     
-    # 1. 라즈베리 파이 CSI 직결 환경 (가장 높은 우선순위)
-    # linux이면서 picamera2가 설치되어 있다면 CSI 직결로 판단
+    # [1] CSI Interface in Raspberry PI
     if "linux" in sysname and PI_CAMERA_AVAILABLE:
-        # Picam2Track 커스텀 객체 반환 (CSI 직결)
-        return Picam2Track(TARGET_WIDTH, TARGET_HEIGHT)
+        return Picam2Track(WIDTH, HEIGHT)
     
-    # 2. Linux Env
+    # [2] USB Camera in Linux
     if "linux" in sysname:
         # USB 웹캠용 MediaPlayer 반환
         return MediaPlayer("/dev/video0", format="v4l2",
-                           options={"framerate": "30", "video_size": f"{TARGET_WIDTH}x{TARGET_HEIGHT}"})
+                           options={"framerate": "30", "video_size": f"{WIDTH}x{HEIGHT}"})
 
-    # 3. macOS Env
+    # [3] USB Camera in macOS
     if "darwin" in sysname or "mac" in sysname:
         return MediaPlayer("default", format="avfoundation",
-                           options={"framerate": "30", "video_size": "1280x720"})
+                           options={"framerate": "30", "video_size": f"{WIDTH}x{HEIGHT}"})
 
-    # 4. Windows Env
+    # [4] USB Camera in Window
     if "windows" in sysname:
-        # "video=Integrated Camera" may be changed because of real camera name 
-        return MediaPlayer("video=Integrated Camera", format="dshow",
-                           options={"video_size": f"{TARGET_WIDTH}x{TARGET_HEIGHT}", "framerate": "30"})
+        return MediaPlayer(f"video={VIDEO}", format="dshow",
+                           options={"video_size": f"{WIDTH}x{HEIGHT}", "framerate": "30"})
         
     return None
 
@@ -113,7 +121,6 @@ class WebRTCPublisher:
         self.publisher_id = publisher_id
         self.config = config
         self.pc = None
-        # self.player 대신 self.media_source로 이름 변경
         self.media_source = None 
         self.stop_event = asyncio.Event()
 
@@ -213,7 +220,7 @@ class WebRTCPublisher:
 
 
 if __name__ == "__main__":
-    publisher = WebRTCPublisher(publisher_id=PUBLISHER_ID, config=RTC_CONFIG)
+    publisher = WebRTCPublisher(publisher_id=PUB_ID, config=RTC_CONFIG)
     try:
         asyncio.run(publisher.run())
     except KeyboardInterrupt:

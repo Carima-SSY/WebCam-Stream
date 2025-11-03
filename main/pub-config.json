@@ -1,0 +1,17 @@
+{
+    "video": {
+        "type": "video-type",
+        "resol":{
+            "width": 640,
+            "height": 480
+        }
+    },
+    "publisher": {
+        "id": "publisher-id"
+    },
+    "host": {
+        "ip": "host-ip",
+        "user": "host-user",
+        "pass": "host-password"
+    }
+}
